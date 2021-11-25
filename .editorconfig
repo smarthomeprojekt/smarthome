@@ -1,0 +1,15 @@
+# https://editorconfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+
+# To use the <br> tag in a markdown file
+[*.md]
+trim_trailing_whitespace = false
