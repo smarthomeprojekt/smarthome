@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  fhem:
+    image: "fhem/fhem"
+    restart: always
+    ports:
+      - "8083:8083"
+    volumes:
+      - "./fhem/core:/opt/fhem"
+    environment:
+      CONFIGTYPE: "fhem.cfg.demo"
+      TZ: Europe/Berlin
