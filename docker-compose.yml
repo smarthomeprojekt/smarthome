@@ -7,7 +7,7 @@ services:
     ports:
       - "8083:8083"
     volumes:
-      - "./fhem/core:/opt/fhem"
+      - "./fhem:/opt/fhem"
     environment:
       CONFIGTYPE: "fhem.cfg.demo"
       TZ: Europe/Berlin

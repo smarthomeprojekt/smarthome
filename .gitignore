@@ -1,3 +1,13 @@
+### project specific ###
+/fhem/FHEM/FhemUtils/uniqueID
+/fhem/fhem.cfg.bak
+/fhem/backup/*
+/fhem/cache/*
+/fhem/log/*
+/fhem/restoreDir/*
+/fhem/.ssh/*
+### End project specific ###
+
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos
 
