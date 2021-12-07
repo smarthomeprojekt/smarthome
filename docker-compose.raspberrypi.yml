@@ -1,0 +1,4 @@
+services:
+  fhem:
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
