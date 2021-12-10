@@ -6,6 +6,7 @@
 /fhem/log/*
 /fhem/restoreDir/*
 /fhem/.ssh/*
+/fhem/.npm/*
 ### End project specific ###
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos
