@@ -1,12 +1,13 @@
 ### project specific ###
+/fhem/.config/configstore/update-notifier-npm.json
+/fhem/.npm/*
+/fhem/.ssh/*
 /fhem/FHEM/FhemUtils/uniqueID
-/fhem/fhem.cfg.bak
 /fhem/backup/*
 /fhem/cache/*
+/fhem/fhem.cfg.bak
 /fhem/log/*
 /fhem/restoreDir/*
-/fhem/.ssh/*
-/fhem/.npm/*
 ### End project specific ###
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos
