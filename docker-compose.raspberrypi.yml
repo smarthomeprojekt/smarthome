@@ -1,5 +1,7 @@
 services:
   fhem:
+    ports:
+      - "1883:1883"
     devices:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
     environment:
