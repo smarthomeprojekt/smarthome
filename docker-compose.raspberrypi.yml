@@ -1,4 +1,9 @@
 services:
   fhem:
+    ports:
+      - "1883:1883"
     devices:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
+    environment:
+      FHEM_UID: 1001
+      FHEM_GID: 1001
