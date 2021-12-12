@@ -38,9 +38,177 @@
 </head>
 
 <body>
+  
 
     <div class="gridster">
         <ul>
+          <li data-row="1" data-col="1" data-sizey="1" data-sizex="1">
+            <div class="sheet">
+              <div class="row">
+                <div class="cell">
+                  <div data-type="clock" data-format="l, j. F Y">
+                  </div>
+              </div>
+            </div>
+          </li>
+          <li data-row="2" data-col="1" data-sizey="2" data-sizex="1">
+            <header>Sturmwarnung</header>
+            <div class="sheet">
+              <div class="row">
+                <div class="cell">
+                  <div data-type="label">
+                    Push Benachrichtigung ab Windstärke:
+                  </div>
+                  <div data-type="input" id="sendTask" class="notransmit"></div>
+                  <div
+                    data-type="link"
+                    class="round"
+                    data-device="MyList"
+                    data-set="setPushNotificationConstraint"
+                    data-value="#sendTask"
+                  >
+                    OK
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="cell">
+                  <div data-type="label">
+                    Eingabe Handy-Nummer:
+                  </div>
+                  <div data-type="input" id="sendTask" class="notransmit"></div>
+                  <div
+                    data-type="link"
+                    class="round"
+                    data-device="MyList"
+                    data-set="setPushNotificationConstraint"
+                    data-value="#sendTask"
+                  >
+                    OK
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li data-row="2" data-col="4" data-sizey="2" data-sizex="2">
+            <header>WEIHNACHTSBELEUCHTUNG</header>
+            <div class="sheet">
+              <div class="row">
+                <div class="cell">
+                  <div
+                    data-type="switch"
+                    data-device="LightsOne_Sw"
+                    class=""
+                  ></div>
+                  <div>Lichterkette 1</div>
+                </div>
+                <div class="cell">
+                  <div>
+                    <div data-type="label">Lichterkette 1</div>
+                    <div
+                      data-type="select"
+                      data-device="LichterketteOneMode"
+                      data-items='["Fest definierte Betriebszeit","Betriebszeit abhängig von Sonnenauf-/untergang", "Betriebszeit abhängig von Sonnenauf-/untergang & Uhrzeit an Werktagen", "Betriebszeit abhängig von Sonnenauf-/untergang & Anwesenheitserkennung"]'
+                      data-get="input"
+                      data-set="input"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="cell">
+                  <div
+                    data-type="switch"
+                    data-device="LightsTwo_Sw"
+                    class=""
+                  ></div>
+                  <div>Lichterkette 2</div>
+                </div>
+                <div class="cell">
+                  <div>
+                    <div data-type="label">Lichterkette 2</div>
+                    <div
+                      data-type="select"
+                      data-device="LichterketteTwoMode"
+                      data-items='["Fest definierte Betriebszeit","Betriebszeit abhängig von Sonnenauf-/untergang", "Betriebszeit abhängig von Sonnenauf-/untergang & Uhrzeit an Werktagen", "Betriebszeit abhängig von Sonnenauf-/untergang & Anwesenheitserkennung"]'
+                      data-get="input"
+                      data-set="input"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li data-row="3" data-col="3" data-sizey="1" data-sizex="2">
+            <header>Einfaches Heizen per Infrarotheizung mit erzuegtem Solarstrom</header>
+            <div class="sheet">
+              <div class="row">
+                <div class="cell">
+                  <div
+                    data-type="switch"
+                    data-device="LightsOne_Sw"
+                    class="">
+                  </div>
+                  <div>Einfaches Heizen per Infrarotheizung
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li data-row="3" data-col="2" data-sizey="1" data-sizex="1">
+            <header>Optimiertes Heizen per Infrarotheizung mit erzuegtem Solarstrom</header>
+            <div class="sheet">
+              <div class="row">
+                <div class="cell">
+                  <div
+                    data-type="switch"
+                    data-device="LightsOne_Sw" <i class="fas "></i>
+                    data-icons='["fa-thermometer-half","fa-calendar-alt","fa-search-dollar","fa-solar-panel"]'
+                    class="">
+                  </div>
+                  <div>Optimiertes Heizen per Infrarotheizung
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li data-row="3" data-col="2" data-sizey="3" data-sizex="1">
+            <header>Warmwasserboiler</header>
+            <div class="sheet">
+              <div class="row">
+                <div class="cell">
+                  <div
+                    data-type="switch"
+                    data-device="LightsOne_Sw"
+                    class="">
+                  </div>
+                  <div>Warmwasserboiler
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="cell">
+                  <div
+                    data-type="switch"
+                    data-device="LightsTwo_Sw"
+                    class=""
+                  ></div>
+                  <div>Warmwasserboiler
+                  </div>
+                  <div class="cell">
+                    <div>
+                      <div data-type="homestatus"
+                        data-device="dummy1"
+                        data-get-on='["power-off","calendar","cheap","solar"]'
+                        data-alias='["Ein","Zeitraum","Günstige Stromzeiten","Solarstrom"]'
+                        data-icons='["fa-power-off","fa-calendar-alt","fa-search-dollar","fa-solar-panel"]'
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
             <li data-row="1" data-col="1" data-sizey="1" data-sizex="1">
                 <header>TREND</header>
                 <div class="sheet">
