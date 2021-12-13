@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="gridster">
+      <ul>
+        <li
+          data-row="1"
+          data-col="1"
+          data-sizex="1"
+          data-sizey="7"
+          data-template="menu.html"
+        ></li>
+        <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">
+          <header>Weihnachtsbeleuchtung</header>
+        </li>
+        <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
+          <div class="cell">
+            <header>Lichterkette 1</header>
+            <div data-type="switch" data-device="LightsOne_Sw" class="xl"></div>
+            <div data-type="label" class="xl">Lichterkette 1</div>
+          </div>
+        </li>
+        <li data-row="4" data-col="4" data-sizex="2" data-sizey="2">
+          <div class="cell">
+            <header>Lichterkette 2</header>
+            <div data-type="switch" data-device="LightsTwo_Sw" class="xl"></div>
+            <div data-type="label" class="xl">Lichterkette 2</div>
+          </div>
+        </li>
+        <li data-row="4" data-col="2" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Zeitschaltuhr</header>
+            <div
+              data-type="switch"
+              data-device="LightsOne_Sw"
+              class=""
+              data-get="state"
+              data-set-on="active"
+              data-set-off="active"
+              data-icon="fa-clock-o"
+              data-get-off-inactive
+            ></div>
+            <div data-type="label" class="">Einschalten um:</div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+            <div data-type="label" class="">Ausschalten um:</div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+          </div>
+        </li>
+        <li data-row="5" data-col="2" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Tageszeit</header>
+            <div
+              data-type="switch"
+              data-device="LightsOne_Sw"
+              data-icon="fa-sun"
+              class=""
+            ></div>
+            <div data-type="label" class="">Sonnenaufgang um:</div>
+            <div data-type="label" class="xl">07:00:00</div>
+
+            <div data-type="label" class="">Sonnenuntergang um:</div>
+            <div data-type="label" class="xl">21:00:00</div>
+          </div>
+        </li>
+        <li data-row="5" data-col="4" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Tageszeit</header>
+            <div
+              data-type="switch"
+              data-device="LightsOne_Sw"
+              data-icon="fa-sun"
+              class=""
+            ></div>
+            <div data-type="label" class="">Sonnenaufgang um:</div>
+            <div data-type="label" class="xl">07:00:00</div>
+
+            <div data-type="label" class="">Sonnenuntergang um:</div>
+            <div data-type="label" class="xl">21:00:00</div>
+          </div>
+        </li>
+        <li data-row="5" data-col="4" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Zeitschaltuhr</header>
+            <div
+              data-type="switch"
+              data-device="LightsOne_Sw"
+              class=""
+              data-get="state"
+              data-set-on="active"
+              data-set-off="active"
+              data-icon="fa-clock-o"
+              data-get-off-inactive
+            ></div>
+            <div data-type="label" class="">Einschalten um:</div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+            <div data-type="label" class="">Ausschalten um:</div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+          </div>
+        </li>
+        <li data-row="6" data-col="4" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Anwesenheitserkennung</header>
+            <div
+              data-type="switch"
+              data-device="LightsOne_Sw"
+              data-icon="fa-mobile-alt"
+              class=""
+            ></div>
+            <div data-type="label" class="">iPhone nicht in der Nähe</div>
+          </div>
+        </li>
+        <li data-row="6" data-col="3" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Betriebszeit</header>
+            <div
+              data-type="switch"
+              data-device="LightsOne_Sw"
+              data-icon="fa-calendar"
+              class=""
+            ></div>
+            <div data-type="label" class="">Mo-Fr zwischen:</div>
+            <div data-type="label" class="">Einschalten um:</div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+            <div data-type="label" class="">Ausschalten um:</div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+          </div>
+        </li>
+        <li data-row="6" data-col="2" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Anwesenheitserkennung</header>
+            <div
+              data-type="switch"
+              data-device="LightsOne_Sw"
+              data-icon="fa-mobile-alt"
+              class=""
+            ></div>
+            <div data-type="label" class="">iPhone nicht in der Nähe</div>
+          </div>
+        </li>
+        <li data-row="6" data-col="5" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Betriebszeit</header>
+            <div
+              data-type="switch"
+              data-device="LightsOne_Sw"
+              data-icon="fa-calendar"
+              class=""
+            ></div>
+            <div data-type="label" class="">Mo-Fr zwischen:</div>
+            <div data-type="label" class="">Einschalten um:</div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+            <div data-type="label" class="">Ausschalten um:</div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
