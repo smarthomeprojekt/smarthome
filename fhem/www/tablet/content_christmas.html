@@ -15,14 +15,14 @@
         </li>
         <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
           <div class="cell">
-            <header>Lichterkette 1</header>
+            <header>Manuelles Einschalten</header>
             <div data-type="switch" data-device="Steckdose433" class="xl"></div>
             <div data-type="label" class="xl">Lichterkette 1</div>
           </div>
         </li>
         <li data-row="4" data-col="4" data-sizex="2" data-sizey="2">
           <div class="cell">
-            <header>Lichterkette 2</header>
+            <header>Manuelles Einschalten</header>
             <div
               data-type="switch"
               data-device="SteckdoseWLAN"
@@ -31,6 +31,7 @@
             <div data-type="label" class="xl">Lichterkette 2</div>
           </div>
         </li>
+        <!-- Modi Lichterkette 1  -->
         <li data-row="4" data-col="2" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Zeitschaltuhr</header>
@@ -38,38 +39,16 @@
               data-type="switch"
               data-device="Steckdose433"
               class=""
-              data-get="state"
+              data-get="FesteZeit433"
               data-set-on="active"
-              data-set-off="active"
+              data-set-off="inactive"
               data-icon="fa-clock-o"
               data-get-off-inactive
             ></div>
             <div data-type="label" class="">Einschalten um:</div>
-            <div class="hbox">
-              <div data-type="input" id="sendTask" class="notransmit"></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="MyList"
-                data-set="addTask"
-                data-value="#sendTask"
-              >
-                OK
-              </div>
-            </div>
+            <div data-type="label" class="xl">17:00 Uhr</div>
             <div data-type="label" class="">Ausschalten um:</div>
-            <div class="hbox">
-              <div data-type="input" id="sendTask" class="notransmit"></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="MyList"
-                data-set="addTask"
-                data-value="#sendTask"
-              >
-                OK
-              </div>
-            </div>
+            <div data-type="label" class="xl">07:00 Uhr</div>
           </div>
         </li>
         <li data-row="5" data-col="2" data-sizex="1" data-sizey="2">
@@ -77,31 +56,60 @@
             <header>Tageszeit</header>
             <div
               data-type="switch"
-              data-device="Steckdose433"
+              data-device="Sonne433"
+              data-get="state"
+              data-set-on="active"
+              data-set-off="inactive"
+              data-get-on="active"
+              data-get-off="inactive"
               data-icon="fa-sun"
-              class=""
             ></div>
             <div data-type="label" class="">Sonnenaufgang um:</div>
-            <div data-type="label" class="xl">07:00:00</div>
+            <div
+              data-type="label"
+              data-device="Sonne433"
+              data-get="STATE"
+              class="bigger"
+            ></div>
 
             <div data-type="label" class="">Sonnenuntergang um:</div>
-            <div data-type="label" class="xl">21:00:00</div>
+            <div
+              data-type="label"
+              data-device="Sonne433"
+              data-get="STATE"
+              class="bigger"
+            ></div>
           </div>
         </li>
+        <!-- Konfiguration Lichterkette 2 (WLAN Steckdose) -->
         <li data-row="5" data-col="4" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Tageszeit</header>
             <div
               data-type="switch"
-              data-device="SteckdoseWLAN"
+              data-device="SonneWLAN"
+              data-get="state"
+              data-set-on="active"
+              data-set-off="inactive"
+              data-get-on="active"
+              data-get-off="inactive"
               data-icon="fa-sun"
-              class=""
             ></div>
             <div data-type="label" class="">Sonnenaufgang um:</div>
-            <div data-type="label" class="xl">07:00:00</div>
+            <div
+              data-type="label"
+              data-device="SonneWLAN"
+              data-get="STATE"
+              class="bigger"
+            ></div>
 
             <div data-type="label" class="">Sonnenuntergang um:</div>
-            <div data-type="label" class="xl">21:00:00</div>
+            <div
+              data-type="label"
+              data-device="SonneWLAN"
+              data-get="STATE"
+              class="bigger"
+            ></div>
           </div>
         </li>
         <li data-row="5" data-col="4" data-sizex="1" data-sizey="2">
@@ -111,38 +119,16 @@
               data-type="switch"
               data-device="SteckdoseWLAN"
               class=""
-              data-get="state"
+              data-get="FesteZeitWLAN"
               data-set-on="active"
-              data-set-off="active"
+              data-set-off="inactive"
               data-icon="fa-clock-o"
               data-get-off-inactive
             ></div>
             <div data-type="label" class="">Einschalten um:</div>
-            <div class="hbox">
-              <div data-type="input" id="sendTask" class="notransmit"></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="MyList"
-                data-set="addTask"
-                data-value="#sendTask"
-              >
-                OK
-              </div>
-            </div>
+            <div data-type="label" class="xl">18:00 Uhr</div>
             <div data-type="label" class="">Ausschalten um:</div>
-            <div class="hbox">
-              <div data-type="input" id="sendTask" class="notransmit"></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="MyList"
-                data-set="addTask"
-                data-value="#sendTask"
-              >
-                OK
-              </div>
-            </div>
+            <div data-type="label" class="xl">08:00 Uhr</div>
           </div>
         </li>
         <li data-row="6" data-col="4" data-sizex="1" data-sizey="2">
@@ -159,14 +145,13 @@
         </li>
         <li data-row="6" data-col="3" data-sizex="1" data-sizey="2">
           <div class="cell">
-            <header>Betriebszeit</header>
+            <header>Betriebszeit an Werktagen</header>
             <div
               data-type="switch"
               data-device="Steckdose433"
               data-icon="fa-calendar"
               class=""
             ></div>
-            <div data-type="label" class="">Mo-Fr zwischen:</div>
             <div data-type="label" class="">Einschalten um:</div>
             <div class="hbox">
               <div data-type="input" id="sendTask" class="notransmit"></div>
@@ -209,14 +194,13 @@
         </li>
         <li data-row="6" data-col="5" data-sizex="1" data-sizey="2">
           <div class="cell">
-            <header>Betriebszeit</header>
+            <header>Betriebszeit an Werktagen</header>
             <div
               data-type="switch"
               data-device="SteckdoseWLAN"
               data-icon="fa-calendar"
               class=""
             ></div>
-            <div data-type="label" class="">Mo-Fr zwischen:</div>
             <div data-type="label" class="">Einschalten um:</div>
             <div class="hbox">
               <div data-type="input" id="sendTask" class="notransmit"></div>
