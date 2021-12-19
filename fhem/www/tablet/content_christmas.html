@@ -11,13 +11,13 @@
           data-template="menu.html"
         ></li>
         <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">
-          <header>Weihnachtsbeleuchtung</header>
+          <div data-type="label" class="bigger">Weihnachtsbeleuchtung</div>
         </li>
         <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
           <div class="cell">
             <header>Manuelles Einschalten</header>
             <div data-type="switch" data-device="Steckdose433" class="xl"></div>
-            <div data-type="label" class="xl">Lichterkette 1</div>
+            <div data-type="label" class="xl">Lichterkette Funk</div>
           </div>
         </li>
         <li data-row="4" data-col="4" data-sizex="2" data-sizey="2">
@@ -28,10 +28,10 @@
               data-device="SteckdoseWLAN"
               class="xl"
             ></div>
-            <div data-type="label" class="xl">Lichterkette 2</div>
+            <div data-type="label" class="xl">Lichterkette WLAN</div>
           </div>
         </li>
-        <!-- Modi Lichterkette 1  -->
+        <!-- Modi Lichterkette Funk  -->
         <li data-row="4" data-col="2" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Zeitschaltuhr</header>
@@ -42,8 +42,9 @@
               data-get="FesteZeit433"
               data-set-on="active"
               data-set-off="inactive"
+              data-get-on="active"
+              data-get-off="inactive"
               data-icon="fa-clock-o"
-              data-get-off-inactive
             ></div>
             <div data-type="label" class="">Einschalten um:</div>
             <div data-type="label" class="xl">17:00 Uhr</div>
@@ -81,7 +82,7 @@
             ></div>
           </div>
         </li>
-        <!-- Konfiguration Lichterkette 2 (WLAN Steckdose) -->
+        <!-- Konfiguration Lichterkette WLAN -->
         <li data-row="5" data-col="4" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Tageszeit</header>
@@ -122,8 +123,9 @@
               data-get="FesteZeitWLAN"
               data-set-on="active"
               data-set-off="inactive"
+              data-get-on="active"
+              data-get-off="inactive"
               data-icon="fa-clock-o"
-              data-get-off-inactive
             ></div>
             <div data-type="label" class="">Einschalten um:</div>
             <div data-type="label" class="xl">18:00 Uhr</div>
@@ -185,11 +187,25 @@
             <header>Anwesenheitserkennung</header>
             <div
               data-type="switch"
-              data-device="Steckdose433"
+              data-device="STATE"
               data-icon="fa-mobile-alt"
+              data-set-on="enable"
+              data-set-off="disable"
+              data-get-on="enable"
+              data-get-off="disabled"
+            ></div>
+            <div
+              data-type="label"
+              data-device="MoritzHandy"
+              data-get="STATE"
               class=""
             ></div>
-            <div data-type="label" class="">iPhone nicht in der Nähe</div>
+            <div
+              data-type="label"
+              data-device="PaulHandy"
+              data-get="STATE"
+              class=""
+            ></div>
           </div>
         </li>
         <li data-row="6" data-col="5" data-sizex="1" data-sizey="2">
