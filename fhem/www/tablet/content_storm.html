@@ -10,8 +10,54 @@
           data-sizey="7"
           data-template="menu.html"
         ></li>
-        <li data-row="1" data-col="2" data-sizex="4" data-sizey="7">
+        <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">
           <header>Sturmwarnung</header>
+        </li>
+        <li data-row="2" data-col="2" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Push-Notification</header>
+            <div data-type="label" class="">
+              Ab Windstärke / Sturmböenstärke:
+            </div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+          </div>
+        </li>
+        <li data-row="2" data-col="3" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Hinzufügen von Handynummern</header>
+            <div data-type="label" class="">
+              Eingabe Handynummer: 
+            </div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+          </div>
+        </li>
+        <li data-row="2" data-col="4" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Hinterlegte Handynummern</header>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
