@@ -15,12 +15,13 @@
           <div class="hbox">
             <div
               data-type="image"
-              data-url="assets/Logo_Haus.png"
+              data-url="assets/Logo_Haus_FTUI.png"
               data-size="80px"
             ></div>
             <div data-type="label" class="bigger">Balkonkraftwerk</div>
           </div>
         </li>
+        <!-- Einfaches Heizen per Infrarotheizung -->
         <li data-row="2" data-col="2" data-sizex="2" data-sizey="4">
           <div class="cell">
             <header>Einfaches Heizen per Infrarotheizung</header>
@@ -116,6 +117,7 @@
             </div>
           </div>
         </li>
+        <!-- Optimiertes Heizen per Infrarotheizung -->
         <li data-row="2" data-col="3" data-sizex="2" data-sizey="4">
           <div class="cell">
             <header>Optimiertes Heizen per Infrarotheizung</header>
@@ -213,10 +215,29 @@
         <li data-row="4" data-col="2" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Optimierter Betrieb Warmwasserboiler</header>
-            <div data-type="switch" data-device="" class=""></div>
+            <div 
+              data-type="switch" 
+              data-device="Balkon_Out" 
+              class="" 
+              <!-- data-get="State" -->
+              data-set-on="active"
+              data-set-off="inactive"
+              data-get-on="active"
+              data-get-off="inactive" 
+              data-icon="fa-power-off"
+            ></div>
             <div data-type="label" class="">Manuelles Ein-/Ausschalten</div>
-
-            <div data-type="switch" data-device="" class=""></div>
+            <div 
+              data-type="switch" 
+              data-device="" 
+              class="" 
+              data-get="State"
+              data-set-on="active"
+              data-set-off="inactive"
+              data-get-on="active"
+              data-get-off="inactive" 
+              data-icon="fa-calendar-alt" 
+            ></div>
             <div data-type="label" class="">Aktivierung im Zeitraum:</div>
             <div
               data-type="datetimepicker"
