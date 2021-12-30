@@ -10,13 +10,26 @@
           data-sizey="7"
           data-template="menu.html"
         ></li>
+        <!-- Überschrift  -->
         <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">
-          <header>Balkonkraftwerk</header>
+          <div class="hbox">
+            <div
+              data-type="image"
+              data-url="assets/Logo_Haus.png"
+              data-size="80px"
+            ></div>
+            <div data-type="label" class="bigger">Balkonkraftwerk</div>
+          </div>
         </li>
-        <li data-row="2" data-col="2" data-sizex="1" data-sizey="4">
+        <li data-row="2" data-col="2" data-sizex="2" data-sizey="4">
           <div class="cell">
             <header>Einfaches Heizen per Infrarotheizung</header>
-            <div data-type="checkbox" data-device="State" class=""></div>
+            <div
+              data-type="checkbox"
+              data-device="State"
+              class=""
+              data-on-background-color="#0096c7"
+            ></div>
             <div data-type="label" class="">
               Überprüfungsintervall (in Minuten):
             </div>
@@ -33,6 +46,7 @@
                 data-device="MyList"
                 data-set="addTask"
                 data-value="#sendTask"
+                data-color="#0096c7"
               >
                 OK
               </div>
@@ -53,6 +67,7 @@
                 data-device="MyList"
                 data-set="addTask"
                 data-value="#sendTask"
+                data-color="#0096c7"
               >
                 OK
               </div>
@@ -73,6 +88,7 @@
                 data-device="MyList"
                 data-set="addTask"
                 data-value="#sendTask"
+                data-color="#0096c7"
               >
                 OK
               </div>
@@ -93,16 +109,22 @@
                 data-device="MyList"
                 data-set="addTask"
                 data-value="#sendTask"
+                data-color="#0096c7"
               >
                 OK
               </div>
             </div>
           </div>
         </li>
-        <li data-row="2" data-col="3" data-sizex="1" data-sizey="4">
+        <li data-row="2" data-col="3" data-sizex="2" data-sizey="4">
           <div class="cell">
             <header>Optimiertes Heizen per Infrarotheizung</header>
-            <div data-type="checkbox" data-device="State" class=""></div>
+            <div
+              data-type="checkbox"
+              data-device="State"
+              class=""
+              data-on-background-color="#0096c7"
+            ></div>
             <div data-type="label" class="">
               Infrarotheizung einschalten ab:
             </div>
@@ -120,6 +142,7 @@
                 data-device="MyList"
                 data-set="addTask"
                 data-value="#sendTask"
+                data-color="#0096c7"
               >
                 OK
               </div>
@@ -138,6 +161,7 @@
                 data-device="MyList"
                 data-set="addTask"
                 data-value="#sendTask"
+                data-color="#0096c7"
               >
                 OK
               </div>
@@ -159,6 +183,7 @@
                 data-device="MyList"
                 data-set="addTask"
                 data-value="#sendTask"
+                data-color="#0096c7"
               >
                 OK
               </div>
@@ -177,35 +202,160 @@
                 data-device="MyList"
                 data-set="addTask"
                 data-value="#sendTask"
+                data-color="#0096c7"
               >
                 OK
               </div>
             </div>
           </div>
         </li>
-        <li data-row="2" data-col="4" data-sizex="2" data-sizey="4">
+        <!-- Optimierter Betrieb Warmwasserboiler -->
+        <li data-row="4" data-col="2" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Optimierter Betrieb Warmwasserboiler</header>
             <div data-type="switch" data-device="" class=""></div>
             <div data-type="label" class="">Manuelles Ein-/Ausschalten</div>
+
             <div data-type="switch" data-device="" class=""></div>
             <div data-type="label" class="">Aktivierung im Zeitraum:</div>
+            <div
+              data-type="datetimepicker"
+              data-device="BeforeGettingUp"
+              data-step="5"
+              data-format="d. F Y"
+              data-timepicker="false"
+              class="inline"
+            ></div>
+            -
+            <div
+              data-type="datetimepicker"
+              data-device="BeforeGettingUp"
+              data-step="5"
+              data-format="d. F Y"
+              data-timepicker="false"
+              class="inline"
+            ></div>
+            
+        </li>
+        <li data-row="4" data-col="3" data-sizex="3" data-sizey="2">
+          <div class="cell">
+            <header></header>
             <div class="hbox">
               <div
-                data-type="input"
-                data-device="Dummy1"
-                data-get="state"
-                data-value="01.12.2021"
+              data-type="datetimepicker"
+              data-device="BeforeGettingUp"
+              data-get="TIMESPEC"
+              data-set-value="*$v"
+              data-cmd="modify"
+              data-step="15"
+              data-datepicker="false"
+              data-format="H:i"
+              data-color="#0096c7"
+              class="inline bigger cell"
               ></div>
-              <div data-type="label">&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</div>
+              <div class="inline large cell">Uhr -</div>
               <div
-                data-type="input"
-                data-device="Dummy1"
-                data-get="state"
-                data-value="10.12.2021"
+              data-type="datetimepicker"
+              data-device="BeforeGettingUp"
+              data-get="TIMESPEC"
+              data-set-value="*$v"
+              data-cmd="modify"
+              data-step="15"
+              data-datepicker="false"
+              data-format="H:i"
+              data-color="#0096c7"
+              class="inline bigger cell"
               ></div>
+              <div class="inline large cell">Uhr</div>
+              <div class="inline">
+                <div
+                data-type="select"
+                data-device="AvReceiver"
+                data-items='["günstigster", "mittlerer", "teuerster"]'
+                data-get="input"
+                data-set="input"
+                ></div>
+              </div>
+              Preis pro KWh
+            </div>
+            <div class="hbox">
+              <div
+              data-type="datetimepicker"
+              data-device="BeforeGettingUp"
+              data-get="TIMESPEC"
+              data-set-value="*$v"
+              data-cmd="modify"
+              data-step="15"
+              data-datepicker="false"
+              data-format="H:i"
+              data-color="#0096c7"
+              class="inline bigger cell"
+              ></div>
+              <div class="inline large cell">Uhr -</div>
+              <div
+              data-type="datetimepicker"
+              data-device="BeforeGettingUp"
+              data-get="TIMESPEC"
+              data-set-value="*$v"
+              data-cmd="modify"
+              data-step="15"
+              data-datepicker="false"
+              data-format="H:i"
+              data-color="#0096c7"
+              class="inline bigger cell"
+              ></div>
+              <div class="inline large cell">Uhr</div>
+              <div class="inline">
+                <div
+                data-type="select"
+                data-device="AvReceiver"
+                data-items='["günstigster", "mittlerer", "teuerster"]'
+                data-get="input"
+                data-set="input"
+                ></div>
+              </div>
+              Preis pro KWh
+            </div>
+            <div class="hbox">
+              <div
+              data-type="datetimepicker"
+              data-device="BeforeGettingUp"
+              data-get="TIMESPEC"
+              data-set-value="*$v"
+              data-cmd="modify"
+              data-step="15"
+              data-datepicker="false"
+              data-format="H:i"
+              data-color="#0096c7"
+              class="inline bigger cell"
+              ></div>
+              <div class="inline large cell">Uhr -</div>
+              <div
+              data-type="datetimepicker"
+              data-device="BeforeGettingUp"
+              data-get="TIMESPEC"
+              data-set-value="*$v"
+              data-cmd="modify"
+              data-step="15"
+              data-datepicker="false"
+              data-format="H:i"
+              data-color="#0096c7"
+              class="inline bigger cell"
+              ></div>
+              <div class="inline large cell">Uhr</div>
+              <div class="inline">
+                <div
+                data-type="select"
+                data-device="AvReceiver"
+                data-items='["günstigster", "mittlerer", "teuerster"]'
+                data-get="input"
+                data-set="input"
+                ></div>
+              </div>
+              Preis pro KWh
             </div>
           </div>
+        </div>
         </li>
       </ul>
     </div>

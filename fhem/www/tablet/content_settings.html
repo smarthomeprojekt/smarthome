@@ -10,8 +10,72 @@
           data-sizey="7"
           data-template="menu.html"
         ></li>
-        <li data-row="1" data-col="2" data-sizex="4" data-sizey="7">
-          <header>Einstellungen</header>
+        <!-- Überschrift  -->
+        <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">
+          <div class="hbox">
+            <div
+              data-type="image"
+              data-url="assets/Logo_Haus.png"
+              data-size="80px"
+            ></div>
+            <div data-type="label" class="bigger">Auswertungen</div>
+          </div>
+        </li>
+        <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
+          <div class="cell">
+            <header>Statistische Auswertung Balkonkraftwerk</header>
+            <div data-type="label" class="l" style="text-align: left">
+              Aktuell produzierter Strom:
+            </div>
+            <div data-type="label" class="" style="text-align: left" ;>
+              Aktualisierungsintervall (in Minuten):
+            </div>
+            <div class="hbox">
+              <div
+                data-type="input"
+                data-value="1"
+                id="sendTask"
+                class="notransmit"
+              ></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+              >
+                OK
+              </div>
+            </div>
+          </div>
+        </li>
+        <li data-row="5" data-col="2" data-sizex="2" data-sizey="2">
+          <div class="cell">
+            <div data-type="label" style="text-align: left" class="l">
+              Aktueller Tag:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Vorhergehender Tag:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Aktuelle Woche:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Vorhergehende Woche:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Aktueller Monat:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Vorhergehender Monat:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Aktuelles Jahr:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Vorhergehendes Jahr:
+            </div>
+          </div>
         </li>
       </ul>
     </div>

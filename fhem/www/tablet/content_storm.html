@@ -10,8 +10,16 @@
           data-sizey="7"
           data-template="menu.html"
         ></li>
+        <!-- Überschrift  -->
         <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">
-          <header>Sturmwarnung</header>
+          <div class="hbox">
+            <div
+              data-type="image"
+              data-url="assets/Logo_Haus.png"
+              data-size="80px"
+            ></div>
+            <div data-type="label" class="bigger">Sturmwarnung</div>
+          </div>
         </li>
         <li data-row="2" data-col="2" data-sizex="1" data-sizey="2">
           <div class="cell">
@@ -27,6 +35,7 @@
                 data-device="MyList"
                 data-set="addTask"
                 data-value="#sendTask"
+                data-color="#0096c7"
               >
                 OK
               </div>
@@ -47,6 +56,7 @@
                 data-device="MyList"
                 data-set="addTask"
                 data-value="#sendTask"
+                data-color="#0096c7"
               >
                 OK
               </div>
