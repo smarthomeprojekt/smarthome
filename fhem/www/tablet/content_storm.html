@@ -11,16 +11,29 @@
           data-template="menu.html"
         ></li>
         <!-- Überschrift  -->
-        <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">
+        <li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
           <div class="hbox">
             <div
               data-type="image"
-              data-url="assets/Logo_Haus.png"
+              data-url="assets/Logo_Haus_FTUI.png"
               data-size="80px"
+              style="margin-right: 20px"
             ></div>
             <div data-type="label" class="bigger">Sturmwarnung</div>
           </div>
         </li>
+        <!-- Uhrzeit-Anzeige -->
+        <li
+          data-row="1"
+          data-col="5"
+          data-sizex="1"
+          data-sizey="1"
+          class="centered"
+        >
+          <div data-type="clock" data-format="H:i" class="tall"></div>
+          <div data-type="clock" data-format="l, j. F Y"></div>
+        </li>
+        <!-- Push-Notification -->
         <li data-row="2" data-col="2" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Push-Notification</header>
@@ -42,12 +55,11 @@
             </div>
           </div>
         </li>
+        <!-- Handynummern Hinzufügen -->
         <li data-row="2" data-col="3" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Hinzufügen von Handynummern</header>
-            <div data-type="label" class="">
-              Eingabe Handynummer: 
-            </div>
+            <div data-type="label" class="">Eingabe Handynummer:</div>
             <div class="hbox">
               <div data-type="input" id="sendTask" class="notransmit"></div>
               <div
@@ -63,9 +75,181 @@
             </div>
           </div>
         </li>
+        <!-- Hinzugefügte Handynummern -->
         <li data-row="2" data-col="4" data-sizex="1" data-sizey="2">
           <div class="cell">
-            <header>Hinterlegte Handynummern</header>
+            <header>Hinzugefügte Handynummern</header>
+          </div>
+        </li>
+        <!-- Wettervorhersage -->
+        <li data-row="3" data-col="2" data-sizex="4" data-sizey="3">
+          <div class="cell">
+            <header>Wettervorhersage</header>
+            <div class="sheet">
+              <div class="row">
+                <div class="cell" style="width: 50%">
+                  <header>Heute</header>
+                  <div class="col-1-3">
+                    <div data-type="label" class="cell top-space narrow">
+                      morgens
+                    </div>
+                    <div
+                      data-type="weather"
+                      data-device="WetterProplanta"
+                      data-get="fc0_weatherMorningIcon"
+                      data-imageset="kleinklima"
+                      class="cell"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc0_weatherMorning"
+                      class="cell top-narrow"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc0_temp06"
+                      data-unit="%B0C%0A"
+                      class="cell bigger"
+                      data-limits="[-50,0]"
+                      data-colors='["#5858FA","white"]'
+                    ></div>
+                  </div>
+                  <div class="col-1-3">
+                    <div data-type="label" class="cell top-space narrow">
+                      mittags
+                    </div>
+                    <div
+                      data-type="weather"
+                      data-device="WetterProplanta"
+                      data-get="fc0_weatherDayIcon"
+                      data-imageset="kleinklima"
+                      class="cell"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc0_weatherDay"
+                      class="cell top-narrow"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc0_temp12"
+                      data-unit="%B0C%0A"
+                      class="cell bigger"
+                      data-limits="[-50,0]"
+                      data-colors='["#5858FA","white"]'
+                    ></div>
+                  </div>
+                  <div class="col-1-3">
+                    <div data-type="label" class="cell top-space narrow">
+                      abends
+                    </div>
+                    <div
+                      data-type="weather"
+                      data-device="WetterProplanta"
+                      data-get="fc0_weatherEveningIcon"
+                      data-imageset="kleinklima"
+                      class="cell"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc0_weatherEvening"
+                      class="cell top-narrow"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc0_temp18"
+                      data-unit="%B0C%0A"
+                      class="cell bigger"
+                      data-limits="[-50,0]"
+                      data-colors='["#5858FA","white"]'
+                    ></div>
+                  </div>
+                </div>
+                <div class="cell" style="width: 50%">
+                  <header>Morgen</header>
+                  <div class="col-1-3">
+                    <div data-type="label" class="cell top-space">morgens</div>
+                    <div
+                      data-type="weather"
+                      data-device="WetterProplanta"
+                      data-get="fc1_weatherMorningIcon"
+                      data-imageset="kleinklima"
+                      class="cell"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc1_weatherMorning"
+                      class="cell top-narrow"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc1_temp06"
+                      data-unit="%B0C%0A"
+                      class="cell bigger"
+                      data-limits="[-50,0]"
+                      data-colors='["#5858FA","white"]'
+                    ></div>
+                  </div>
+                  <div class="col-1-3">
+                    <div data-type="label" class="cell top-space">mittags</div>
+                    <div
+                      data-type="weather"
+                      data-device="WetterProplanta"
+                      data-get="fc1_weatherDayIcon"
+                      data-imageset="kleinklima"
+                      class="cell"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc1_weatherDay"
+                      class="cell top-narrow"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc1_temp12"
+                      data-unit="%B0C%0A"
+                      class="cell bigger"
+                      data-limits="[-50,0]"
+                      data-colors='["#5858FA","white"]'
+                    ></div>
+                  </div>
+                  <div class="col-1-3">
+                    <div data-type="label" class="cell top-space">abends</div>
+                    <div
+                      data-type="weather"
+                      data-device="WetterProplanta"
+                      data-get="fc1_weatherEveningIcon"
+                      data-imageset="kleinklima"
+                      class="cell"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc1_weatherEvening"
+                      class="cell top-narrow"
+                    ></div>
+                    <div
+                      data-type="label"
+                      data-device="WetterProplanta"
+                      data-get="fc1_temp18"
+                      data-unit="%B0C%0A"
+                      class="cell bigger"
+                      data-limits="[-50,0]"
+                      data-colors='["#5858FA","white"]'
+                    ></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </li>
