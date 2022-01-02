@@ -1,3 +1,15 @@
+div[data-type="pagetab"] .label {
+  padding-top: 0 !important;
+  font-size: 60% !important;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .red {
   color: #e34343 !important;
 }

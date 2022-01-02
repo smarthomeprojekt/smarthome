@@ -11,15 +11,27 @@
           data-template="menu.html"
         ></li>
         <!-- Überschrift  -->
-        <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">
+        <li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
           <div class="hbox">
             <div
               data-type="image"
               data-url="assets/Logo_Haus_FTUI.png"
               data-size="80px"
+              style="margin-right: 20px"
             ></div>
             <div data-type="label" class="bigger">Auswertungen</div>
           </div>
+        </li>
+        <!-- Uhrzeit-Anzeige -->
+        <li
+          data-row="1"
+          data-col="5"
+          data-sizex="1"
+          data-sizey="1"
+          class="centered"
+        >
+          <div data-type="clock" data-format="H:i" class="tall"></div>
+          <div data-type="clock" data-format="l, j. F Y"></div>
         </li>
         <!-- Statistische Auswertung Balkonkraftwerk -->
         <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
