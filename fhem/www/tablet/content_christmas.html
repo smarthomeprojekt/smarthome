@@ -10,19 +10,41 @@
           data-sizey="7"
           data-template="menu.html"
         ></li>
-        <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">
-          <div data-type="label" class="bigger">Weihnachtsbeleuchtung</div>
+        <!-- Überschrift  -->
+        <li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
+          <div class="hbox">
+            <div
+              data-type="image"
+              data-url="assets/Logo_Haus_FTUI.png"
+              data-size="80px"
+              style="margin-right: 20px"
+            ></div>
+            <div data-type="label" class="bigger">Weihnachtsbeleuchtung</div>
+          </div>
         </li>
+        <!-- Uhrzeit-Anzeige -->
+        <li
+          data-row="1"
+          data-col="5"
+          data-sizex="1"
+          data-sizey="1"
+          class="centered"
+        >
+          <div data-type="clock" data-format="H:i" class="tall"></div>
+          <div data-type="clock" data-format="l, j. F Y"></div>
+        </li>
+        <!-- Modi Manuelles Einschalten Lichterkette Funk  -->
         <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
           <div class="cell">
-            <header>Manuelles Einschalten</header>
+            <header style="margin-bottom: 20px">Manuelles Einschalten</header>
             <div data-type="switch" data-device="Steckdose433" class="xl"></div>
             <div data-type="label" class="xl">Lichterkette Funk</div>
           </div>
         </li>
+        <!-- Modi Manuelles Einschalten Lichterkette WLAN  -->
         <li data-row="4" data-col="4" data-sizex="2" data-sizey="2">
           <div class="cell">
-            <header>Manuelles Einschalten</header>
+            <header style="margin-bottom: 20px">Manuelles Einschalten</header>
             <div
               data-type="switch"
               data-device="SteckdoseWLAN"
@@ -31,7 +53,7 @@
             <div data-type="label" class="xl">Lichterkette WLAN</div>
           </div>
         </li>
-        <!-- Modi Lichterkette Funk  -->
+        <!-- Modi Zeitschaltuhr Lichterkette Funk  -->
         <li data-row="4" data-col="2" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Zeitschaltuhr</header>
@@ -47,11 +69,12 @@
               data-icon="fa-clock-o"
             ></div>
             <div data-type="label" class="">Einschalten um:</div>
-            <div data-type="label" class="xl">17:00 Uhr</div>
+            <div data-type="label" class="xxl">17:00 Uhr</div>
             <div data-type="label" class="">Ausschalten um:</div>
-            <div data-type="label" class="xl">07:00 Uhr</div>
+            <div data-type="label" class="xxl">07:00 Uhr</div>
           </div>
         </li>
+        <!-- Modi Tageszeit Lichterkette Funk  -->
         <li data-row="5" data-col="2" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Tageszeit</header>
@@ -82,7 +105,7 @@
             ></div>
           </div>
         </li>
-        <!-- Konfiguration Lichterkette WLAN -->
+        <!-- Modi Tageszeit Lichterkette WLAN -->
         <li data-row="5" data-col="4" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Tageszeit</header>
@@ -113,6 +136,7 @@
             ></div>
           </div>
         </li>
+        <!-- Modi Zeitschaltur Lichterkette WLAN -->
         <li data-row="5" data-col="4" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Zeitschaltuhr</header>
@@ -128,121 +152,205 @@
               data-icon="fa-clock-o"
             ></div>
             <div data-type="label" class="">Einschalten um:</div>
-            <div data-type="label" class="xl">18:00 Uhr</div>
+            <div data-type="label" class="xxl">18:00 Uhr</div>
             <div data-type="label" class="">Ausschalten um:</div>
-            <div data-type="label" class="xl">08:00 Uhr</div>
+            <div data-type="label" class="xxl">08:00 Uhr</div>
           </div>
         </li>
+        <!-- Modi Anwesenheitserkennung Lichterkette WLAN -->
         <li data-row="6" data-col="4" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Anwesenheitserkennung</header>
             <div
               data-type="switch"
-              data-device="SteckdoseWLAN"
-              data-icon="fa-mobile-alt"
-              class=""
-            ></div>
-            <div data-type="label" class="">iPhone nicht in der Nähe</div>
-          </div>
-        </li>
-        <li data-row="6" data-col="3" data-sizex="1" data-sizey="2">
-          <div class="cell">
-            <header>Betriebszeit an Werktagen</header>
-            <div
-              data-type="switch"
-              data-device="Steckdose433"
-              data-icon="fa-calendar"
-              class=""
-            ></div>
-            <div data-type="label" class="">Einschalten um:</div>
-            <div class="hbox">
-              <div data-type="input" id="sendTask" class="notransmit"></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="MyList"
-                data-set="addTask"
-                data-value="#sendTask"
-              >
-                OK
-              </div>
-            </div>
-            <div data-type="label" class="">Ausschalten um:</div>
-            <div class="hbox">
-              <div data-type="input" id="sendTask" class="notransmit"></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="MyList"
-                data-set="addTask"
-                data-value="#sendTask"
-              >
-                OK
-              </div>
-            </div>
-          </div>
-        </li>
-        <li data-row="6" data-col="2" data-sizex="1" data-sizey="2">
-          <div class="cell">
-            <header>Anwesenheitserkennung</header>
-            <div
-              data-type="switch"
-              data-device="STATE"
+              data-device="D_AnwesenheitserkennungWLAN"
               data-icon="fa-mobile-alt"
               data-set-on="enable"
               data-set-off="disable"
               data-get-on="enable"
               data-get-off="disabled"
             ></div>
+            <div class="hbox">
+              <div data-type="label">Moritz</div>
+              &nbsp;
+              <div data-type="label">Paul</div>
+              &nbsp;
+              <div data-type="label">Lara</div>
+              &nbsp;
+              <div data-type="label">Nathalie</div>
+            </div>
+            <div class="hbox">
+              <div
+                data-type="label"
+                data-device="MoritzHandy"
+                data-get="STATE"
+                class=""
+              ></div>
+              &nbsp;
+              <div
+                data-type="label"
+                data-device="PaulHandy"
+                data-get="STATE"
+                class=""
+              ></div>
+              &nbsp;
+              <div
+                data-type="label"
+                data-device="LaraHandy"
+                data-get="STATE"
+                class=""
+              ></div>
+              &nbsp;
+              <div
+                data-type="label"
+                data-device="NathalieHandy"
+                data-get="STATE"
+                class=""
+              ></div>
+            </div>
+            <div data-type="label" class="">Einschalten um:</div>
             <div
               data-type="label"
-              data-device="MoritzHandy"
+              data-device="SteckdoseWLAN"
               data-get="STATE"
               class=""
             ></div>
+            <div data-type="label" class="">Ausschalten um:</div>
             <div
               data-type="label"
-              data-device="PaulHandy"
+              data-device="SteckdoseWLAN"
               data-get="STATE"
               class=""
             ></div>
           </div>
         </li>
+        <!-- Modi Betriebszeit an Werktagen Lichterkette Funk  -->
+        <li data-row="6" data-col="3" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Betriebszeit an Werktagen</header>
+            <div
+              data-type="switch"
+              data-device="Steckdose433"
+              class=""
+              data-get="state"
+              data-set-on="active"
+              data-set-off="inactive"
+              data-get-on="active"
+              data-get-off="inactive"
+              data-icon="fa-calendar"
+            ></div>
+            <div data-type="label" class="">Einschalten um:</div>
+            <div
+              data-type="label"
+              data-device="C_SonneZeit433sunrise"
+              data-get="STATE"
+              class="bigger"
+            ></div>
+            <div data-type="label" class="">Ausschalten um:</div>
+            <div
+              data-type="label"
+              data-device="C_SonneZeit433sunset"
+              data-get="STATE"
+              class="bigger"
+            ></div>
+          </div>
+        </li>
+        <!-- Modi Anwesenheitserkennung Lichterkette Funk -->
+        <li data-row="6" data-col="2" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Anwesenheitserkennung</header>
+            <div
+              data-type="switch"
+              data-device="D_Anwesenheitserkennung433"
+              data-icon="fa-mobile-alt"
+              data-set-on="enable"
+              data-set-off="disable"
+              data-get-on="enable"
+              data-get-off="disabled"
+            ></div>
+            <div class="hbox">
+              <div data-type="label">Moritz</div>
+              &nbsp;
+              <div data-type="label">Paul</div>
+              &nbsp;
+              <div data-type="label">Lara</div>
+              &nbsp;
+              <div data-type="label">Nathalie</div>
+            </div>
+            <div class="hbox">
+              <div
+                data-type="label"
+                data-device="MoritzHandy"
+                data-get="STATE"
+                class=""
+              ></div>
+              &nbsp;
+              <div
+                data-type="label"
+                data-device="PaulHandy"
+                data-get="STATE"
+                class=""
+              ></div>
+              &nbsp;
+              <div
+                data-type="label"
+                data-device="LaraHandy"
+                data-get="STATE"
+                class=""
+              ></div>
+              &nbsp;
+              <div
+                data-type="label"
+                data-device="NathalieHandy"
+                data-get="STATE"
+                class=""
+              ></div>
+            </div>
+            <div data-type="label" class="">Einschalten um:</div>
+            <div
+              data-type="label"
+              data-device="Steckdose433"
+              data-get="STATE"
+              class=""
+            ></div>
+            <div data-type="label" class="">Ausschalten um:</div>
+            <div
+              data-type="label"
+              data-device="Steckdose433"
+              data-get="STATE"
+              class=""
+            ></div>
+          </div>
+        </li>
+        <!-- Modi Betriebszeit an Werktagen Lichterkette WLAN  -->
         <li data-row="6" data-col="5" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Betriebszeit an Werktagen</header>
             <div
               data-type="switch"
               data-device="SteckdoseWLAN"
-              data-icon="fa-calendar"
               class=""
+              data-get="state"
+              data-set-on="active"
+              data-set-off="inactive"
+              data-get-on="active"
+              data-get-off="inactive"
+              data-icon="fa-calendar"
             ></div>
             <div data-type="label" class="">Einschalten um:</div>
-            <div class="hbox">
-              <div data-type="input" id="sendTask" class="notransmit"></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="MyList"
-                data-set="addTask"
-                data-value="#sendTask"
-              >
-                OK
-              </div>
-            </div>
+            <div
+              data-type="label"
+              data-device="C_SonneZeitWLANsunrise"
+              data-get="STATE"
+              class="bigger"
+            ></div>
             <div data-type="label" class="">Ausschalten um:</div>
-            <div class="hbox">
-              <div data-type="input" id="sendTask" class="notransmit"></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="MyList"
-                data-set="addTask"
-                data-value="#sendTask"
-              >
-                OK
-              </div>
-            </div>
+            <div
+              data-type="label"
+              data-device="C_SonneZeitWLANsunset"
+              data-get="STATE"
+              class="bigger"
+            ></div>
           </div>
         </li>
       </ul>
