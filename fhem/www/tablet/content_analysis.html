@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="gridster">
+      <ul>
+        <li
+          data-row="1"
+          data-col="1"
+          data-sizex="1"
+          data-sizey="7"
+          data-template="menu.html"
+        ></li>
+        <!-- Überschrift  -->
+        <li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
+          <div class="hbox">
+            <div
+              data-type="image"
+              data-url="assets/Logo_Haus_FTUI.png"
+              data-size="80px"
+              style="margin-right: 20px"
+            ></div>
+            <div data-type="label" class="bigger">Auswertungen</div>
+          </div>
+        </li>
+        <!-- Uhrzeit-Anzeige -->
+        <li
+          data-row="1"
+          data-col="5"
+          data-sizex="1"
+          data-sizey="1"
+          class="centered"
+        >
+          <div data-type="clock" data-format="H:i" class="tall"></div>
+          <div data-type="clock" data-format="l, j. F Y"></div>
+        </li>
+        <!-- Statistische Auswertung Balkonkraftwerk -->
+        <li data-row="2" data-col="2" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Statistische Auswertung Balkonkraftwerk</header>
+            <div data-type="label" class="l" style="text-align: left">
+              Aktuell produzierter Strom:
+            </div>
+            <div data-type="label" class="" style="text-align: left" ;>
+              Aktualisierungsintervall (in Minuten):
+            </div>
+            <div class="hbox">
+              <div
+                data-type="input"
+                data-value="1"
+                id="sendTask"
+                class="notransmit"
+              ></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+                data-color="#0096c7"
+              >
+                OK
+              </div>
+            </div>
+          </div>
+        </li>
+        <li data-row="5" data-col="2" data-sizex="2" data-sizey="2">
+          <div class="cell">
+            <div data-type="label" style="text-align: left" class="l">
+              Aktueller Tag:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Vorhergehender Tag:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Aktuelle Woche:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Vorhergehende Woche:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Aktueller Monat:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Vorhergehender Monat:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Aktuelles Jahr:
+            </div>
+            <div data-type="label" style="text-align: left" class="l">
+              Vorhergehendes Jahr:
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
