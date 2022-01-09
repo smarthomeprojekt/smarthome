@@ -6,7 +6,7 @@ sub Kalenderstart ($)
     my @uids = split(/;/, $Ereignisteil1);
     
     foreach my $uid (@uids) {
-        my $Kalendertext = fhem("get Muelltonnen_Kalender summary $uid");
+        my $Kalendertext = fhem("get MuelltonnenKalender summary $uid");
         if ($Kalendertext =~ /Biotonne/) {
             fhem("set Bio_Tonne ja");
         };
@@ -16,6 +16,7 @@ sub Kalenderstart ($)
         if ($Kalendertext =~ /Papiertonne/) {
             fhem("set Papier_Tonne ja");
         };
+       
     };
 }
 sub Kalenderende ($) {
@@ -25,7 +26,7 @@ sub Kalenderende ($) {
     my @uids = split(/;/, $Ereignisteil1);
     
     foreach my $uid (@uids) {
-        my $Kalendertext = fhem("get Muelltonnen_Kalender summary $uid");
+        my $Kalendertext = fhem("get MuelltonnenKalender summary $uid");
         if ($Kalendertext =~ /Biotonne/) {
             fhem("set Bio_Tonne nein");
         };
@@ -35,5 +36,6 @@ sub Kalenderende ($) {
         if ($Kalendertext =~ /Papiertonne/) {
             fhem("set Papier_Tonne nein");
         };
+       
     };
 }
