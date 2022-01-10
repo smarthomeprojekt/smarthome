@@ -1,3 +1,16 @@
+package main; 
+use strict;
+use warnings; 
+use POSIX;
+sub 
+myUtils_Initialize($$)
+{
+my ($hash) = @_;
+}
+
+
+
+
 sub Kalenderstart ($)
 {
     my ($Ereignis) = @_;
@@ -16,7 +29,6 @@ sub Kalenderstart ($)
         if ($Kalendertext =~ /Papiertonne/) {
             fhem("set Papier_Tonne ja");
         };
-       
     };
 }
 sub Kalenderende ($) {
@@ -36,6 +48,6 @@ sub Kalenderende ($) {
         if ($Kalendertext =~ /Papiertonne/) {
             fhem("set Papier_Tonne nein");
         };
-       
     };
 }
+1;
