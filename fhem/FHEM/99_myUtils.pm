@@ -10,7 +10,7 @@ sub Kalenderstart ($)
         if ($Kalendertext =~ /Biotonne/) {
             fhem("set Bio_Tonne ja");
         };
-        if ($Kalendertext =~ /Restabfalltonne/) {
+        if ($Kalendertext =~ /Restmüll 2-wöchentlich/) {
             fhem("set Restmuell_Tonne ja");
         };
         if ($Kalendertext =~ /Papiertonne/) {
@@ -30,7 +30,7 @@ sub Kalenderende ($) {
         if ($Kalendertext =~ /Biotonne/) {
             fhem("set Bio_Tonne nein");
         };
-        if ($Kalendertext =~ /Restabfalltonne/) {
+        if ($Kalendertext =~ /Restmüll 2-wöchentlich/) {
             fhem("set Restmuell_Tonne nein");
         };
         if ($Kalendertext =~ /Papiertonne/) {
