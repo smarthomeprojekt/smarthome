@@ -3,6 +3,27 @@ div[data-type="pagetab"] .label {
   font-size: 60% !important;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gridtable {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: flex-start;
+  border: 0px;
+}
+
+.gridtable > .label {
+  text-align: left !important;
+}
+
+.gridtable > div[data-type="label"] {
+  text-align: left !important;
+  border: 1px solid;
+}
+
 .centered {
   display: flex;
   flex-direction: column;

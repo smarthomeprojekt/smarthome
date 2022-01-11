@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="gridster">
+      <ul>
+        <li
+          data-row="1"
+          data-col="1"
+          data-sizex="1"
+          data-sizey="7"
+          data-template="menu.html"
+        ></li>
+        <!-- Überschrift  -->
+        <li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
+          <div class="hbox">
+            <div
+              data-type="image"
+              data-url="assets/Logo_Haus_FTUI.png"
+              data-size="80px"
+              style="margin-right: 20px"
+            ></div>
+            <div data-type="label" class="bigger">THE HÖME</div>
+          </div>
+        </li>
+        <!-- Uhrzeit-Anzeige -->
+        <li
+          data-row="1"
+          data-col="5"
+          data-sizex="1"
+          data-sizey="1"
+          class="centered"
+        >
+          <div data-type="clock" data-format="H:i" class="tall"></div>
+          <div data-type="clock" data-format="l, j. F Y"></div>
+        </li>
+        <!-- Modi Manuelles Einschalten Lichterkette Funk  -->
+        <li data-row="2" data-col="2" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Weihnachtsbeleuchtung</header>
+            <div data-type="label" class="" style="text-align: left">
+              Manuelles Ein- und Ausschalten:
+            </div>
+            <div class="flex">
+              <div
+                data-type="switch"
+                data-device="Steckdose433"
+                class="cell inline"
+              ></div>
+              <div
+                data-type="switch"
+                data-device="SteckdoseWLAN"
+                class="cell inline"
+              ></div>
+            </div>
+            <div class="flex">
+              <div data-type="label" class="">Lichterkette Funk</div>
+              <div data-type="label" class="">Lichterkette WLAN</div>
+            </div>
+          </div>
+        </li>
+        <!-- Webradio -->
+        <li data-row="3" data-col="2" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Webradio</header>
+            <div
+              data-type="playstream"
+              data-get="Radiosender:STATE"
+              data-url="Radiosender:link"
+              data-volume="Radio_volume:STATE"
+              class="hide"
+            ></div>
+
+            <div
+              data-type="switch"
+              data-device="Radiosender"
+              data-icon="mi-radio"
+              class="cell inline"
+            ></div>
+
+            <div
+              class="cell inline"
+              data-type="select"
+              data-device="Radiosender"
+              data-list=""
+              data-items='["http://radioeins.de/stream","http://wdr-1live-live.icecast.wdr.de/wdr/1live/live/mp3/128/stream.mp3","https://dispatcher.rndfnk.com/br/br24/live/mp3/low"]'
+              data-alias='["Radio eins","einsLife","BR24"]'
+              data-get="link"
+              data-set="link"
+              data-cmd="setreading"
+            ></div>
+
+            <div
+              data-type="spinner"
+              data-device="Radio_volume"
+              data-max="100"
+              data-step="5"
+              data-icon-left="fa-volume-down"
+              data-icon-right="fa-volume-up"
+              class="spinner value horizontal centered"
+            ></div>
+          </div>
+        </li>
+        <!-- Regenradar -->
+        <li data-row="4" data-col="2" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Regenradar</header>
+            <div
+              data-type="link"
+              data-parent="index"
+              data-url="https://www.dwd.de/DE/leistungen/radarvhs/radarvorhersage.html"
+            >
+              <div
+                data-type="image"
+                data-url="http://niederschlagsradar.mobi/Image/?item=&amp;regio=&amp;w=235"
+                data-size="170px"
+                class="nocache"
+              ></div>
+            </div>
+          </div>
+        </li>
+        <!-- Abfallkalender -->
+        <li data-row="2" data-col="3" data-sizex="2" data-sizey="2">
+          <div class="cell">
+            <header>Abfallkalender</header>
+            <div class="hbox top-space">
+              <div
+                class="cell big"
+                data-type="symbol"
+                data-device="State"
+                data-get="STATE"
+                data-get-on="true|1|on|open"
+                data-icons='["fa-trash warn","fa-trash warn"]'
+                data-background-icon="fa-circle"
+                data-on-background-colors='["bg-lightgray","bg-lightgray"]'
+              ></div>
+              <div
+                class="cell big"
+                data-type="symbol"
+                data-device="State"
+                data-get="STATE"
+                data-get-on="true|1|on|open"
+                data-icons='["fa-trash warn","fa-trash warn"]'
+                data-background-icon="fa-circle"
+                data-on-background-colors='["bg-lightgray","bg-lightgray"]'
+              ></div>
+              <div
+                class="cell big"
+                data-type="symbol"
+                data-device="State"
+                data-get="STATE"
+                data-get-on="true|1|on|open"
+                data-icons='["fa-trash warn","fa-trash warn"]'
+                data-background-icon="fa-circle"
+                data-on-background-colors='["bg-lightgray","bg-lightgray"]'
+              ></div>
+              <div
+                class="cell big"
+                data-type="symbol"
+                data-device="State"
+                data-get="STATE"
+                data-get-on="true|1|on|open"
+                data-icons='["fa-trash warn","fa-trash warn"]'
+                data-background-icon="fa-circle"
+                data-on-background-colors='["bg-lightgray","bg-lightgray"]'
+              ></div>
+            </div>
+          </div>
+        </li>
+        <!-- Wetteranzeige -->
+        <li data-row="2" data-col="5" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Aktuelles Wetter</header>
+            <div class="col-1-3">
+              <div data-type="label" class="cell top-space narrow">morgens</div>
+              <div
+                data-type="weather"
+                data-device="WetterProplanta"
+                data-get="fc0_weatherMorningIcon"
+                data-imageset="kleinklima"
+                class="cell"
+              ></div>
+              <div
+                data-type="label"
+                data-device="WetterProplanta"
+                data-get="fc0_weatherMorning"
+                class="cell top-narrow"
+              ></div>
+              <div
+                data-type="label"
+                data-device="WetterProplanta"
+                data-get="fc0_temp06"
+                data-unit="%B0C%0A"
+                class="cell bigger"
+                data-limits="[-50,0]"
+                data-colors='["#5858FA","white"]'
+              ></div>
+            </div>
+            <div class="col-1-3">
+              <div data-type="label" class="cell top-space narrow">mittags</div>
+              <div
+                data-type="weather"
+                data-device="WetterProplanta"
+                data-get="fc0_weatherDayIcon"
+                data-imageset="kleinklima"
+                class="cell"
+              ></div>
+              <div
+                data-type="label"
+                data-device="WetterProplanta"
+                data-get="fc0_weatherDay"
+                class="cell top-narrow"
+              ></div>
+              <div
+                data-type="label"
+                data-device="WetterProplanta"
+                data-get="fc0_temp12"
+                data-unit="%B0C%0A"
+                class="cell bigger"
+                data-limits="[-50,0]"
+                data-colors='["#5858FA","white"]'
+              ></div>
+            </div>
+            <div class="col-1-3">
+              <div data-type="label" class="cell top-space narrow">abends</div>
+              <div
+                data-type="weather"
+                data-device="WetterProplanta"
+                data-get="fc0_weatherEveningIcon"
+                data-imageset="kleinklima"
+                class="cell"
+              ></div>
+              <div
+                data-type="label"
+                data-device="WetterProplanta"
+                data-get="fc0_weatherEvening"
+                class="cell top-narrow"
+              ></div>
+              <div
+                data-type="label"
+                data-device="WetterProplanta"
+                data-get="fc0_temp18"
+                data-unit="%B0C%0A"
+                class="cell bigger"
+                data-limits="[-50,0]"
+                data-colors='["#5858FA","white"]'
+              ></div>
+            </div>
+          </div>
+        </li>
+        <!-- Pollenflug -->
+        <li data-row="3" data-col="5" data-sizex="1" data-sizey="4">
+          <div class="cell">
+            <header>Pollenflug</header>
+            <table width="100%" class="">
+              <tr>
+                <td>
+                  <div data-type="label" class="">Erle:</div>
+                </td>
+                <td>
+                  <div
+                    data-type="symbol"
+                    data-device="Pollenflug"
+                    data-get="Erle"
+                    data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                    data-get-on='["1","2","3"]'
+                    data-colors='["yellowgreen","yellow","red"]'
+                    style="font-size: 1em"
+                  ></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div data-type="label" class="">Hasel:</div>
+                </td>
+                <td>
+                  <div
+                    data-type="symbol"
+                    data-device="Pollenflug"
+                    data-get="Hasel"
+                    data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                    data-get-on='["1","2","3"]'
+                    data-colors='["yellowgreen","yellow","red"]'
+                    style="font-size: 1em"
+                  ></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div data-type="label" class="">Gräser:</div>
+                </td>
+                <td>
+                  <div
+                    data-type="symbol"
+                    data-device="Pollenflug"
+                    data-get="Graeser"
+                    data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                    data-get-on='["1","2","3"]'
+                    data-colors='["yellowgreen","yellow","red"]'
+                    style="font-size: 1em"
+                  ></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div data-type="label" class="">Linde:</div>
+                </td>
+                <td>
+                  <div
+                    data-type="symbol"
+                    data-device="Pollenflug"
+                    data-get="Linde"
+                    data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                    data-get-on='["1","2","3"]'
+                    data-colors='["yellowgreen","yellow","red"]'
+                    style="font-size: 1em"
+                  ></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div data-type="label" class="">Birke:</div>
+                </td>
+                <td>
+                  <div
+                    data-type="symbol"
+                    data-device="Pollenflug"
+                    data-get="Birke"
+                    data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                    data-get-on='["1","2","3"]'
+                    data-colors='["yellowgreen","yellow","red"]'
+                    style="font-size: 1em"
+                  ></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div data-type="label" class="">Raps:</div>
+                </td>
+                <td>
+                  <div
+                    data-type="symbol"
+                    data-device="Pollenflug"
+                    data-get="Raps"
+                    data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                    data-get-on='["1","2","3"]'
+                    data-colors='["yellowgreen","yellow","red"]'
+                    style="font-size: 1em"
+                  ></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div data-type="label" class="">Kiefer:</div>
+                </td>
+                <td>
+                  <div
+                    data-type="symbol"
+                    data-device="Pollenflug"
+                    data-get="Kiefer"
+                    data-icons='["fa-forumbee","fa-forumbee","fa-forumbee"]'
+                    data-get-on='["1","2","3"]'
+                    data-colors='["yellowgreen","yellow","red"]'
+                    style="font-size: 1em"
+                  ></div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </li>
+        <!-- Spritpreise -->
+        <li data-row="3" data-col="3" data-sizex="2" data-sizey="2">
+          <div class="cell">
+            <header>Spritpreise</header>
+          </div>
+          <table width="100%" class="">
+            <tr>
+              <th>Tankstelle</th>
+              <th>Diesel</th>
+              <th>Super</th>
+              <th>E10</th>
+            </tr>
+            <tr>
+              <td>
+                <div class="inline">Shell</div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Shell"
+                  data-get="Diesel"
+                  class=""
+                ></div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Shell"
+                  data-get="SuperE5"
+                  class=""
+                ></div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Shell"
+                  data-get="SuperE10"
+                  class=""
+                ></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="inline">Total</div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Total"
+                  data-get="Diesel"
+                  class=""
+                ></div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Total"
+                  data-get="SuperE5"
+                  class=""
+                ></div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Total"
+                  data-get="SuperE10"
+                  class=""
+                ></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="inline">Aral</div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Aral"
+                  data-get="Diesel"
+                  class=""
+                ></div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Aral"
+                  data-get="SuperE5"
+                  class=""
+                ></div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Aral"
+                  data-get="SuperE5"
+                  class=""
+                ></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="inline">Esso</div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Esso"
+                  data-get="Diesel"
+                  class=""
+                ></div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Esso"
+                  data-get="SuperE5"
+                  class=""
+                ></div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Esso"
+                  data-get="SuperE10"
+                  class=""
+                ></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="inline">Agip</div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Agip"
+                  data-get="Diesel"
+                  class=""
+                ></div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Agip"
+                  data-get="SuperE5"
+                  class=""
+                ></div>
+              </td>
+              <td>
+                <div
+                  data-type="label"
+                  data-device="Tankstelle_Agip"
+                  data-get="SuperE10"
+                  class=""
+                ></div>
+              </td>
+            </tr>
+          </table>
+        </li>
+        <!-- Balkonkraftwerk Modis  -->
+        <li data-row="4" data-col="3" data-sizex="2" data-sizey="2">
+          <div class="cell">
+            <header>Balkonkraftwerk</header>
+            <div class="flex">
+              <div
+                data-type="checkbox"
+                data-device="aktualisieren"
+                class="cell inline"
+                data-on-background-color="#0096c7"
+              ></div>
+              <div
+                data-type="checkbox"
+                data-device="optimiertesHeizen"
+                class="cell inline"
+                data-get="State"
+                data-set-on="active"
+                data-set-off="inactive"
+                data-get-on="active"
+                data-get-off="inactive"
+              ></div>
+              <div
+                data-type="checkbox"
+                data-device="Warmwasserboiler"
+                class="cell inline"
+                data-get="State"
+                data-set-on="on"
+                data-set-off="off"
+                data-get-on="on"
+                data-get-off="off"
+              ></div>
+            </div>
+            <div class="flex">
+              <div data-type="label" class="">Einfaches Heizen</div>
+              <div data-type="label" class="">Optimiertes Heizen</div>
+              <div data-type="label" class="">Warmwasserboiler</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
