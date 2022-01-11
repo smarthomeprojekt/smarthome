@@ -11,7 +11,7 @@
           data-template="menu.html"
         ></li>
         <!-- Überschrift  -->
-        <li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
+        <li data-row="1" data-col="2" data-sizex="4" data-sizey="1">
           <div class="hbox">
             <div
               data-type="image"
@@ -37,29 +37,35 @@
         <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
           <div class="cell">
             <header>Statistische Auswertung Balkonkraftwerk</header>
-            <div data-type="label" class="l" style="text-align: left">
-              Aktuell produzierter Strom:
+            <div class="hbox">
+              <div data-type="label" class="l" style="text-align: left">
+                Aktuell produzierter Strom:
+              </div>
+              <div
+                data-type="label"
+                data-device="aktuellerStrom"
+                data-get="STATE"
+                style="text-align: left"
+                class=""
+              ></div>
             </div>
             <div data-type="label" class="" style="text-align: left" ;>
               Aktualisierungsintervall (in Minuten):
             </div>
             <div class="hbox">
               <div
-                data-type="input"
-                data-value="1"
-                id="sendTask"
-                class="notransmit"
-              ></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="MyList"
-                data-set="addTask"
-                data-value="#sendTask"
+                data-type="datetimepicker"
+                data-device="aktualisieren"
+                data-get="TIMESPEC"
+                data-set-value="+*$v"
+                data-step="1"
+                data-cmd="modify"
+                data-datepicker="false"
+                data-format="H:i"
+                data-max-time="00:16"
+                class="inline large cell"
                 data-color="#0096c7"
-              >
-                OK
-              </div>
+              ></div>
             </div>
           </div>
         </li>
@@ -91,14 +97,30 @@
             </div>
           </div>
         </li>
+        <!-- Balkendiagramm -->
         <li data-row="2" data-col="4" data-sizex="3" data-sizey="3">
           <div class="cell">
             <div
               data-type="chart"
-              data-device="DG.wz.HZ.Heizungsventil"
-              data-logdevice="FileLog_DG.wz.HZ.Heizungsventil"
+              data-device="Balkon_In"
+              data-logdevice="FileLog_Balkon_In"
               data-logfile="-"
-              data-style="bars"
+              data-ptype="steps"
+              data-columnspec='["4:relay_0_power"]'
+              data-yunit="W"
+              data-ytext="Watt"
+              data-daysago_start="2021-01-01T00:00:00"
+              data-daysago_end="2021-12-31T00:00:00"
+              data-title="Erzeugter Strom"
+              data-style="ftui l6fill"
+              data-timeranges='[
+              ["Aktuelles Jahr","0Y","-1Y"],
+              ["Vorhergehendes Jahr","1Y","0Y"],
+              ["Aktueller Monat","0M","-1M"],
+              ["Vorhergehender Monat","1M","0M"],
+              ["Aktuelle Woche","0W","-1W"],
+              ["Vorhergehende Woche","1W","0W"]
+              ]'
             ></div>
           </div>
         </li>
