@@ -286,13 +286,13 @@
             <div class="hbox">
               <div
                 data-type="switch"
-                data-device="Warmwasserboiler"
+                data-device="wochenplanG"
                 class=""
                 data-get="State"
-                data-set-on="on"
-                data-set-off="off"
-                data-get-on="on"
-                data-get-off="off"
+                data-set-on="active"
+                data-set-off="inactive"
+                data-get-on="active"
+                data-get-off="inactive"
                 data-icon="fa-coins"
               ></div>
               <div data-type="label" class="">
@@ -300,13 +300,13 @@
               </div>
               <div
                 data-type="switch"
-                data-device="Warmwasserboiler"
+                data-device="wochenplanGM"
                 class=""
                 data-get="State"
-                data-set-on="on"
-                data-set-off="off"
-                data-get-on="on"
-                data-get-off="off"
+                data-set-on="active"
+                data-set-off="inactive"
+                data-get-on="active"
+                data-get-off="inactive"
                 data-icon="fa-money-bill"
               ></div>
               <div data-type="label" class="">
@@ -319,11 +319,10 @@
             <div class="hbox">
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time1"
+                data-set="time1"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -332,11 +331,10 @@
               <div class="inline large cell">Uhr -</div>
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time2"
+                data-set="time2"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -346,10 +344,10 @@
               <div class="inline">
                 <div
                   data-type="select"
-                  data-device="AvReceiver"
+                  data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="input"
-                  data-set="input"
+                  data-get="tarif1"
+                  data-set=""
                 ></div>
               </div>
               Preis pro KWh
@@ -357,11 +355,10 @@
             <div class="hbox">
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time2"
+                data-set="time2"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -370,11 +367,10 @@
               <div class="inline large cell">Uhr -</div>
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time3"
+                data-set="time3"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -384,10 +380,10 @@
               <div class="inline">
                 <div
                   data-type="select"
-                  data-device="AvReceiver"
+                  data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="input"
-                  data-set="input"
+                  data-get="tarif2"
+                  data-set=""
                 ></div>
               </div>
               Preis pro KWh
@@ -395,11 +391,10 @@
             <div class="hbox">
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time3"
+                data-set="time3"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -408,11 +403,10 @@
               <div class="inline large cell">Uhr -</div>
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time4"
+                data-set="time4"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -422,10 +416,10 @@
               <div class="inline">
                 <div
                   data-type="select"
-                  data-device="AvReceiver"
+                  data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="input"
-                  data-set="input"
+                  data-get="tarif3"
+                  data-set=""
                 ></div>
               </div>
               Preis pro KWh
@@ -433,11 +427,10 @@
             <div class="hbox">
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time4"
+                data-set="time4"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -446,11 +439,10 @@
               <div class="inline large cell">Uhr -</div>
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time5"
+                data-set="time5"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -460,10 +452,10 @@
               <div class="inline">
                 <div
                   data-type="select"
-                  data-device="AvReceiver"
+                  data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="input"
-                  data-set="input"
+                  data-get="tarif4"
+                  data-set=""
                 ></div>
               </div>
               Preis pro KWh
@@ -471,11 +463,10 @@
             <div class="hbox">
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time5"
+                data-set="time5"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -484,11 +475,10 @@
               <div class="inline large cell">Uhr -</div>
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time6"
+                data-set="time6"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -498,10 +488,10 @@
               <div class="inline">
                 <div
                   data-type="select"
-                  data-device="AvReceiver"
+                  data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="input"
-                  data-set="input"
+                  data-get="tarif5"
+                  data-set=""
                 ></div>
               </div>
               Preis pro KWh
@@ -509,11 +499,10 @@
             <div class="hbox">
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time6"
+                data-set="time6"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -522,11 +511,10 @@
               <div class="inline large cell">Uhr -</div>
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time7"
+                data-set="time7"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -536,10 +524,10 @@
               <div class="inline">
                 <div
                   data-type="select"
-                  data-device="AvReceiver"
+                  data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="input"
-                  data-set="input"
+                  data-get="tarif6"
+                  data-set=""
                 ></div>
               </div>
               Preis pro KWh
@@ -550,11 +538,10 @@
             <div class="hbox">
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time7"
+                data-set="time7"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -563,11 +550,10 @@
               <div class="inline large cell">Uhr -</div>
               <div
                 data-type="datetimepicker"
-                data-device="BeforeGettingUp"
-                data-get="TIMESPEC"
-                data-set-value="*$v"
-                data-cmd="modify"
-                data-step="15"
+                data-device="timetable"
+                data-get="time8"
+                data-set="time8"
+                data-step="60"
                 data-datepicker="false"
                 data-format="H:i"
                 data-color="#0096c7"
@@ -577,10 +563,10 @@
               <div class="inline">
                 <div
                   data-type="select"
-                  data-device="AvReceiver"
+                  data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="input"
-                  data-set="input"
+                  data-get="tarif7"
+                  data-set=""
                 ></div>
               </div>
               Preis pro KWh
