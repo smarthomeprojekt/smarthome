@@ -59,12 +59,11 @@
             <header>Zeitschaltuhr</header>
             <div
               data-type="switch"
-              data-device="FesteZeit433"
-              class=""
-              data-get="FesteZeit433"
+              data-device="A_FesteZeit433"
+              data-get="state"
               data-set-on="active"
               data-set-off="inactive"
-              data-get-on="active"
+              data-get-on="!inactive"
               data-get-off="inactive"
               data-icon="fa-clock-o"
             ></div>
@@ -84,7 +83,7 @@
               data-get="state"
               data-set-on="active"
               data-set-off="inactive"
-              data-get-on="active"
+              data-get-on="!inactive"
               data-get-off="inactive"
               data-icon="fa-sun"
             ></div>
@@ -115,7 +114,7 @@
               data-get="state"
               data-set-on="active"
               data-set-off="inactive"
-              data-get-on="active"
+              data-get-on="!inactive"
               data-get-off="inactive"
               data-icon="fa-sun"
             ></div>
@@ -142,12 +141,11 @@
             <header>Zeitschaltuhr</header>
             <div
               data-type="switch"
-              data-device="FesteZeitWLAN"
-              class=""
-              data-get="FesteZeitWLAN"
+              data-device="A_FesteZeitWLAN"
+              data-get="state"
               data-set-on="active"
               data-set-off="inactive"
-              data-get-on="active"
+              data-get-on="!inactive"
               data-get-off="inactive"
               data-icon="fa-clock-o"
             ></div>
@@ -165,42 +163,35 @@
               data-type="switch"
               data-device="D_AnwesenheitserkennungWLAN"
               data-icon="fa-mobile-alt"
-              data-set-on="enable"
+              data-set-on="initialize"
               data-set-off="disable"
-              data-get-on="enable"
+              data-get-on="!disabled"
               data-get-off="disabled"
             ></div>
-            <div class="hbox">
+
+            <div class="gridtable">
               <div data-type="label">Moritz</div>
-              &nbsp;
               <div data-type="label">Paul</div>
-              &nbsp;
               <div data-type="label">Lara</div>
-              &nbsp;
               <div data-type="label">Nathalie</div>
-            </div>
-            <div class="hbox">
               <div
                 data-type="label"
                 data-device="MoritzHandy"
                 data-get="STATE"
                 class=""
               ></div>
-              &nbsp;
               <div
                 data-type="label"
                 data-device="PaulHandy"
                 data-get="STATE"
                 class=""
               ></div>
-              &nbsp;
               <div
                 data-type="label"
                 data-device="LaraHandy"
                 data-get="STATE"
                 class=""
               ></div>
-              &nbsp;
               <div
                 data-type="label"
                 data-device="NathalieHandy"
@@ -208,6 +199,7 @@
                 class=""
               ></div>
             </div>
+
             <div data-type="label" class="">Einschalten um:</div>
             <div data-type="label" class="xxl">17:00 Uhr</div>
             <div data-type="label" class="">Ausschalten um:</div>
@@ -225,7 +217,7 @@
               data-get="state"
               data-set-on="active"
               data-set-off="inactive"
-              data-get-on="active"
+              data-get-on="!inactive"
               data-get-off="inactive"
               data-icon="fa-calendar"
             ></div>
@@ -253,42 +245,36 @@
               data-type="switch"
               data-device="D_Anwesenheitserkennung433"
               data-icon="fa-mobile-alt"
-              data-set-on="enable"
+              data-set-on="initialize"
               data-set-off="disable"
-              data-get-on="enable"
+              data-get-on="!disabled"
               data-get-off="disabled"
             ></div>
-            <div class="hbox">
+
+            <div class="gridtable">
               <div data-type="label">Moritz</div>
-              &nbsp;
               <div data-type="label">Paul</div>
-              &nbsp;
               <div data-type="label">Lara</div>
-              &nbsp;
               <div data-type="label">Nathalie</div>
-            </div>
-            <div class="hbox">
+
               <div
                 data-type="label"
                 data-device="MoritzHandy"
                 data-get="STATE"
                 class=""
               ></div>
-              &nbsp;
               <div
                 data-type="label"
                 data-device="PaulHandy"
                 data-get="STATE"
                 class=""
               ></div>
-              &nbsp;
               <div
                 data-type="label"
                 data-device="LaraHandy"
                 data-get="STATE"
                 class=""
               ></div>
-              &nbsp;
               <div
                 data-type="label"
                 data-device="NathalieHandy"
@@ -296,6 +282,7 @@
                 class=""
               ></div>
             </div>
+
             <div data-type="label" class="">Einschalten um:</div>
             <div data-type="label" class="xxl">17:00 Uhr</div>
             <div data-type="label" class="">Ausschalten um:</div>
@@ -313,7 +300,7 @@
               data-get="state"
               data-set-on="active"
               data-set-off="inactive"
-              data-get-on="active"
+              data-get-on="!inactive"
               data-get-off="inactive"
               data-icon="fa-calendar"
             ></div>

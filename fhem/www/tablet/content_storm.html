@@ -33,33 +33,29 @@
           <div data-type="clock" data-format="H:i" class="tall"></div>
           <div data-type="clock" data-format="l, j. F Y"></div>
         </li>
-        <!-- Push-Notification -->
+        <!-- Sturmwarnung einschalten -->
         <li data-row="2" data-col="2" data-sizex="1" data-sizey="2">
           <div class="cell">
-            <header>Push-Notification</header>
-            <div data-type="label" class="">
-              Ab Windstärke / Sturmböenstärke:
-            </div>
-            <div class="hbox">
-              <div data-type="input" id="sendTask" class="notransmit"></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="MyList"
-                data-set="addTask"
-                data-value="#sendTask"
-                data-color="#0096c7"
-              >
-                OK
-              </div>
-            </div>
+            <header>Sturmwarnung Einschalten</header>
+            <div
+              data-type="switch"
+              data-device="B_SonneWLAN"
+              data-get="state"
+              data-set-on="active"
+              data-set-off="inactive"
+              data-get-on="active"
+              data-get-off="inactive"
+              data-icon="fa-power-off"
+              class="xl"
+            ></div>
+            <div data-type="label" class="l">Sturmwarnung</div>
           </div>
         </li>
-        <!-- Handynummern Hinzufügen -->
+        <!-- Push-Notification -->
         <li data-row="2" data-col="3" data-sizex="1" data-sizey="2">
           <div class="cell">
-            <header>Hinzufügen von Handynummern</header>
-            <div data-type="label" class="">Eingabe Handynummer:</div>
+            <header>Push-Notification ab:</header>
+            <div data-type="label" class="">Ab Windstärke (in m/s):</div>
             <div class="hbox">
               <div data-type="input" id="sendTask" class="notransmit"></div>
               <div
@@ -73,16 +69,24 @@
                 OK
               </div>
             </div>
-          </div>
-        </li>
-        <!-- Hinzugefügte Handynummern -->
-        <li data-row="2" data-col="4" data-sizex="1" data-sizey="2">
-          <div class="cell">
-            <header>Hinzugefügte Handynummern</header>
+            <div data-type="label" class="">Ab Sturmböenstärke (in m/s):</div>
+            <div class="hbox">
+              <div data-type="input" id="sendTask" class="notransmit"></div>
+              <div
+                data-type="link"
+                class="round"
+                data-device="MyList"
+                data-set="addTask"
+                data-value="#sendTask"
+                data-color="#0096c7"
+              >
+                OK
+              </div>
+            </div>
           </div>
         </li>
         <!-- Aktuelle Windstärke / Sturmböenstärke -->
-        <li data-row="2" data-col="5" data-sizex="1" data-sizey="2">
+        <li data-row="2" data-col="4" data-sizex="2" data-sizey="2">
           <div class="cell">
             <header>Aktuelle Windstärke / Sturmböenstärke</header>
             <div
@@ -96,7 +100,7 @@
         <!-- Wettervorhersage -->
         <li data-row="3" data-col="2" data-sizex="4" data-sizey="3">
           <div class="cell">
-            <header>Wettervorhersage</header>
+            <header>Wettervorhersage für Stuttgart</header>
             <div class="sheet">
               <div class="row">
                 <div class="cell" style="width: 50%">
