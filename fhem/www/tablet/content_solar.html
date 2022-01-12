@@ -393,7 +393,8 @@
                   data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
                   data-get="tarif2"
-                  data-set=""
+                  data-set="tarif2"
+                  data-cmd="setreading"
                 ></div>
               </div>
               Preis pro KWh
@@ -431,7 +432,8 @@
                   data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
                   data-get="tarif3"
-                  data-set=""
+                  data-set="tarif3"
+                  data-cmd="setreading"
                 ></div>
               </div>
               Preis pro KWh
@@ -469,7 +471,8 @@
                   data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
                   data-get="tarif4"
-                  data-set=""
+                  data-set="tarif4"
+                  data-cmd="setreading"
                 ></div>
               </div>
               Preis pro KWh
@@ -507,7 +510,8 @@
                   data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
                   data-get="tarif5"
-                  data-set=""
+                  data-set="tarif5"
+                  data-cmd="setreading"
                 ></div>
               </div>
               Preis pro KWh
@@ -545,7 +549,8 @@
                   data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
                   data-get="tarif6"
-                  data-set=""
+                  data-set="tarif6"
+                  data-cmd="setreading"
                 ></div>
               </div>
               Preis pro KWh
@@ -564,7 +569,8 @@
                   data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
                   data-get="tarif7"
-                  data-set=""
+                  data-set="tarif7"
+                  data-cmd="setreading"
                 ></div>
               </div>
               Preis pro KWh
@@ -583,10 +589,10 @@
               data-device="warmwasserboilerWattmodus"
               class=""
               data-get="State"
-              data-set-on="on"
-              data-set-off="off"
-              data-get-on="on"
-              data-get-off="off"
+              data-set-on="active"
+              data-set-off="inactive"
+              data-get-on="active"
+              data-get-off="inactive"
               data-icon="fa-sun"
             ></div>
             <div data-type="label" class="">
@@ -615,6 +621,7 @@
             </div>
           </div>
         </li>
+        <!-- Status der Geräte Infrarotheizung und Warmwasserboiler sowie Priorisierung-->
         <li data-row="6" data-col="2" data-sizex="1" data-sizey="2">
           <div class="cell">
             <header>Aktuelle Geräte im Haus</header>
@@ -650,6 +657,7 @@
               data-get-on="active"
               data-get-off="inactive"
               data-get="state"
+              data-set=""
               class=""
               data-on-background-color="#0096c7"
             ></div>
