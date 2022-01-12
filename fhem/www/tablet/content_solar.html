@@ -349,7 +349,8 @@
                   data-device="tarifplan"
                   data-items='["günstigster", "mittlerer", "teuerster"]'
                   data-get="tarif1"
-                  data-set=""
+                  data-set="tarif1"
+                  data-cmd="setreading"
                 ></div>
               </div>
               Preis pro KWh
@@ -607,6 +608,36 @@
             <div data-type="label" class="">
               Überprüfungsintervall: 5 Minuten
             </div>
+          </div>
+        </li>
+        <li data-row="6" data-col="2" data-sizex="1" data-sizey="2">
+          <div class="cell">
+            <header>Aktuelle Geräte im Haus</header>
+            <div class="flex">
+              <div
+                data-type="symbol"
+                data-device="Infrarotheizung"
+                data-icon="fa-power-off"
+                data-background-icon="fa-circle"
+                data-on-color="#0096c7"
+                data-on-background-color="bg-lightgray"
+                class="cell inline"
+              ></div>
+              <div
+                data-type="symbol"
+                data-device="Warmwasserboiler"
+                data-icon="fa-power-off"
+                data-background-icon="fa-circle"
+                data-on-color="#0096c7"
+                data-on-background-color="bg-lightgray"
+                class="cell inline"
+              ></div>
+            </div>
+            <div class="flex">
+              <div data-type="label" class="">Infrarotheizung</div>
+              <div data-type="label" class="">Warmwasserboiler</div>
+            </div>
+          </div>
           </div>
         </li>
       </ul>
