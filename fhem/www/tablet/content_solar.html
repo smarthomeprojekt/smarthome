@@ -139,11 +139,13 @@
               data-type="checkbox"
               data-device="optimiertesHeizen"
               class=""
-              data-get="State"
+              data-get="state"
               data-set-on="active"
               data-set-off="inactive"
               data-get-on="active"
               data-get-off="inactive"
+              data-cmd="setreading"
+              data-set="state"
             ></div>
             <div data-type="label" class="">
               Infrarotheizung einschalten ab:
@@ -159,7 +161,7 @@
               <div
                 data-type="link"
                 class="round"
-                data-device="temperatureMin"
+                data-device="SensorTemperatureMin"
                 data-get=""
                 data-color="#0096c7"
                 data-value="#sendTemperatureMin"
@@ -178,7 +180,7 @@
               <div
                 data-type="link"
                 class="round"
-                data-device="humidityMax"
+                data-device="SensorHumidityMax"
                 data-get=""
                 data-color="#0096c7"
                 data-value="#sendHumidityMax"
@@ -200,7 +202,7 @@
               <div
                 data-type="link"
                 class="round"
-                data-device="temperatureMax"
+                data-device="SensorTemperatureMax"
                 data-get=""
                 data-color="#0096c7"
                 data-value="#sendTemperatureMax"
@@ -219,7 +221,7 @@
               <div
                 data-type="link"
                 class="round"
-                data-device="humidityMin"
+                data-device="SensorHumidityMin"
                 data-get=""
                 data-color="#0096c7"
                 data-value="#sendHumidityMin"
@@ -249,12 +251,14 @@
               data-type="switch"
               data-device="bestimmterZeitraum"
               class=""
-              data-get="State"
+              data-get="state"
               data-set-on="on"
               data-set-off="off"
               data-get-on="on"
               data-get-off="off"
               data-icon="fa-calendar-alt"
+              data-cmd="setreading"
+              data-set="state"
             ></div>
             <div
               data-type="datetimepicker"
@@ -293,12 +297,14 @@
                 data-type="switch"
                 data-device="wochenplanG"
                 class=""
-                data-get="State"
+                data-get="state"
                 data-set-on="active"
                 data-set-off="inactive"
                 data-get-on="active"
                 data-get-off="inactive"
                 data-icon="fa-coins"
+                data-set="state"
+                data-cmd="setreading"
               ></div>
               <div data-type="label" class="">
                 Aktivierung in günstigen Stromzeiten
@@ -307,12 +313,14 @@
                 data-type="switch"
                 data-device="wochenplanGM"
                 class=""
-                data-get="State"
+                data-get="state"
                 data-set-on="active"
                 data-set-off="inactive"
                 data-get-on="active"
                 data-get-off="inactive"
                 data-icon="fa-money-bill"
+                data-set="state"
+                data-cmd="setreading"
               ></div>
               <div data-type="label" class="">
                 Aktivierung in günstigen & mittleren Stromzeiten
@@ -588,12 +596,14 @@
               data-type="switch"
               data-device="warmwasserboilerWattmodus"
               class=""
-              data-get="State"
+              data-get="state"
               data-set-on="active"
               data-set-off="inactive"
               data-get-on="active"
               data-get-off="inactive"
               data-icon="fa-sun"
+              data-cmd="setreading"
+              data-set="state"
             ></div>
             <div data-type="label" class="">
               Erzeugung Solarstrom ab (in Watt):
@@ -657,8 +667,8 @@
               data-get-on="active"
               data-get-off="inactive"
               data-get="state"
-              data-set=""
-              class=""
+              data-set="state"
+              data-cmd="setreading"
               data-on-background-color="#0096c7"
             ></div>
             <div data-type="label" class="">Priorisierung</div>
