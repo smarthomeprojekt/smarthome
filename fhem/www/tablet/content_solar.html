@@ -1,689 +1,316 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <div class="gridster">
-      <ul>
-        <li
-          data-row="1"
-          data-col="1"
-          data-sizex="1"
-          data-sizey="7"
-          data-template="menu.html"
-        ></li>
-        <!-- Überschrift  -->
-        <li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
+
+<body>
+  <div class="gridster">
+    <ul>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="7" data-template="menu.html"></li>
+      <!-- Überschrift  -->
+      <li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
+        <div class="hbox">
+          <div data-type="image" data-url="assets/Logo_Haus_FTUI.png" data-size="80px" style="margin-right: 20px"></div>
+          <div data-type="label" class="bigger">Balkonkraftwerk</div>
+        </div>
+      </li>
+      <!-- Uhrzeit-Anzeige -->
+      <li data-row="1" data-col="5" data-sizex="1" data-sizey="1" class="centered">
+        <div data-type="clock" data-format="H:i" class="tall"></div>
+        <div data-type="clock" data-format="l, j. F Y"></div>
+      </li>
+      <!-- Einfaches Heizen per Infrarotheizung -->
+      <li data-row="2" data-col="2" data-sizex="1" data-sizey="4">
+        <div class="cell">
+          <header>Einfaches Heizen per Infrarotheizung</header>
+          <div data-type="checkbox" data-device="aktualisieren" data-set-on="active" data-set-off="inactive"
+            data-get-on="!inactive" data-get-off="inactive" data-get="state" class=""
+            data-on-background-color="#0096c7"></div>
+          <div data-type="label" class="">
+            Überprüfungsintervall (Format: hh:mm):
+          </div>
           <div class="hbox">
-            <div
-              data-type="image"
-              data-url="assets/Logo_Haus_FTUI.png"
-              data-size="80px"
-              style="margin-right: 20px"
-            ></div>
-            <div data-type="label" class="bigger">Balkonkraftwerk</div>
+            <div data-type="datetimepicker" data-device="aktualisieren" data-get="TIMESPEC" data-set-value="+*$v"
+              data-step="1" data-cmd="modify" data-datepicker="false" data-format="H:i" data-max-time="00:16"
+              class="inline large cell" data-color="#0096c7"></div>
           </div>
-        </li>
-        <!-- Uhrzeit-Anzeige -->
-        <li
-          data-row="1"
-          data-col="5"
-          data-sizex="1"
-          data-sizey="1"
-          class="centered"
-        >
-          <div data-type="clock" data-format="H:i" class="tall"></div>
-          <div data-type="clock" data-format="l, j. F Y"></div>
-        </li>
-        <!-- Einfaches Heizen per Infrarotheizung -->
-        <li data-row="2" data-col="2" data-sizex="1" data-sizey="4">
-          <div class="cell">
-            <header>Einfaches Heizen per Infrarotheizung</header>
-            <div
-              data-type="checkbox"
-              data-device="aktualisieren"
-              data-set-on="active"
-              data-set-off="inactive"
-              data-get-on="!inactive"
-              data-get-off="inactive"
-              data-get="state"
-              class=""
-              data-on-background-color="#0096c7"
-            ></div>
-            <div data-type="label" class="">
-              Überprüfungsintervall (Format: hh:mm):
-            </div>
-            <div class="hbox">
-              <div
-                data-type="datetimepicker"
-                data-device="aktualisieren"
-                data-get="TIMESPEC"
-                data-set-value="+*$v"
-                data-step="1"
-                data-cmd="modify"
-                data-datepicker="false"
-                data-format="H:i"
-                data-max-time="00:16"
-                class="inline large cell"
-                data-color="#0096c7"
-              ></div>
-            </div>
-            <div data-type="label" class="">
-              Einschalten der Infrarotheizung ab (in Watt):
-            </div>
-            <div class="hbox">
-              <div
-                data-type="input"
-                data-device="wattnumber"
-                data-get="state"
-                data-value="300"
-                id="sendwattnumber"
-              ></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="wattnumber"
-                data-get=""
-                data-value="#sendwattnumber"
-                data-color="#0096c7"
-              >
-                OK
-              </div>
-            </div>
-            <div data-type="label" class="">
-              Maximale Heizdauer (in Minuten):
-            </div>
-            <div class="hbox">
-              <div
-                data-type="input"
-                data-device="heatMax"
-                data-get="state"
-                data-value="120"
-                id="sendheatMax"
-              ></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="heatMax"
-                data-get=""
-                data-value="#sendheatMax"
-                data-color="#0096c7"
-              >
-                OK
-              </div>
-            </div>
-            <div data-type="label" class="">
-              Dauer des Überhitzungsschutzes (in Minuten):
-            </div>
-            <div class="hbox">
-              <div
-                data-type="input"
-                data-device="overheating"
-                data-get="state"
-                data-value="15"
-                id="sendoverheating"
-              ></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="overheating"
-                data-get=""
-                data-value="#sendoverheating"
-                data-color="#0096c7"
-              >
-                OK
-              </div>
+          <div data-type="label" class="">
+            Einschalten der Infrarotheizung ab (in Watt):
+          </div>
+          <div class="hbox">
+            <div data-type="input" data-device="wattnumber" data-get="state" data-value="300" id="sendwattnumber"></div>
+            <div data-type="link" class="round" data-device="wattnumber" data-get="" data-value="#sendwattnumber"
+              data-color="#0096c7">
+              OK
             </div>
           </div>
-        </li>
-        <!-- Optimiertes Heizen per Infrarotheizung -->
-        <li data-row="2" data-col="3" data-sizex="1" data-sizey="4">
-          <div class="cell">
-            <header>Optimiertes Heizen per Infrarotheizung</header>
-            <div
-              data-type="checkbox"
-              data-device="optimiertesHeizen"
-              class=""
-              data-get="state"
-              data-set-on="active"
-              data-set-off="inactive"
-              data-get-on="active"
-              data-get-off="inactive"
-              data-cmd="setreading"
-              data-set="state"
-              data-on-background-color="#0096c7"
-            ></div>
-            <div data-type="label" class="">
-              Infrarotheizung einschalten ab:
-            </div>
-            <div data-type="label" class="">Temperatur unter (in °C):</div>
-            <div class="hbox">
-              <div
-                data-type="input"
-                data-device="SensorTemperatureMin"
-                data-get="state"
-                data-value="19"
-                id="sendTemperatureMin"
-              ></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="SensorTemperatureMin"
-                data-get=""
-                data-color="#0096c7"
-                data-value="#sendTemperatureMin"
-              >
-                OK
-              </div>
-            </div>
-            <div data-type="label" class="">Luftfeuchtigkeit über (in %):</div>
-            <div class="hbox">
-              <div
-                data-type="input"
-                data-device="SensorHumidityMax"
-                data-get="state"
-                data-value="75"
-                id="sendHumidityMax"
-              ></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="SensorHumidityMax"
-                data-get=""
-                data-color="#0096c7"
-                data-value="#sendHumidityMax"
-              >
-                OK
-              </div>
-            </div>
-            <div data-type="label" class="">
-              Infrarotheizung ausschalten ab:
-            </div>
-            <div data-type="label" class="">Temperatur über (in °C):</div>
-            <div class="hbox">
-              <div
-                data-type="input"
-                data-device="SensorTemperatureMax"
-                data-get="state"
-                data-value="21"
-                id="sendTemperatureMax"
-              ></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="SensorTemperatureMax"
-                data-get=""
-                data-color="#0096c7"
-                data-value="#sendTemperatureMax"
-              >
-                OK
-              </div>
-            </div>
-            <div data-type="label" class="">Luftfeuchtigkeit unter (in %):</div>
-            <div class="hbox">
-              <div
-                data-type="input"
-                data-device="SensorHumidityMin"
-                data-get="state"
-                data-value="70"
-                id="sendHumidityMin"
-              ></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="SensorHumidityMin"
-                data-get=""
-                data-color="#0096c7"
-                data-value="#sendHumidityMin"
-              >
-                OK
-              </div>
+          <div data-type="label" class="">
+            Maximale Heizdauer (in Minuten):
+          </div>
+          <div class="hbox">
+            <div data-type="input" data-device="heatMax" data-get="state" data-value="120" id="sendheatMax"></div>
+            <div data-type="link" class="round" data-device="heatMax" data-get="" data-value="#sendheatMax"
+              data-color="#0096c7">
+              OK
             </div>
           </div>
-        </li>
-        <!-- Optimierter Betrieb Warmwasserboiler -->
-        <li data-row="4" data-col="2" data-sizex="2" data-sizey="2">
-          <div class="cell">
-            <header>Optimierter Betrieb Warmwasserboiler</header>
-            <div data-type="label" class="">Manuelles Ein-/Ausschalten</div>
-            <div
-              data-type="checkbox"
-              data-device="Warmwasserboiler"
-              class=""
-              data-get="State"
-              data-set-on="on"
-              data-set-off="off"
-              data-get-on="on"
-              data-get-off="off"
-            ></div>
-            <div data-type="label" class="">Aktivierung im Zeitraum:</div>
-            <div
-              data-type="switch"
-              data-device="bestimmterZeitraum"
-              class=""
-              data-get="state"
-              data-set-on="on"
-              data-set-off="off"
-              data-get-on="on"
-              data-get-off="off"
-              data-icon="fa-calendar-alt"
-              data-cmd="setreading"
-              data-set="state"
-            ></div>
-            <div
-              data-type="datetimepicker"
-              data-device="bestimmterZeitraum"
-              data-step="5"
-              data-format="d.m.Y H:i"
-              data-set="P_begin"
-              data-get="P_begin"
-              data-set-on="on"
-              data-set-off="off"
-              data-get-on="on"
-              data-get-off="off"
-              class="inline"
-            ></div>
-            -
-            <div
-              data-type="datetimepicker"
-              data-device="bestimmterZeitraum"
-              data-step="5"
-              data-format="d.m.Y H:i"
-              data-set="P_ende"
-              data-get="P_ende"
-              data-set-on="on"
-              data-set-off="off"
-              data-get-on="on"
-              data-get-off="off"
-              class="inline"
-            ></div>
+          <div data-type="label" class="">
+            Dauer des Überhitzungsschutzes (in Minuten):
           </div>
-        </li>
-        <!-- Wochenplan -->
-        <li data-row="4" data-col="3" data-sizex="2" data-sizey="4">
-          <div class="cell">
-            <div class="hbox">
-              <div
-                data-type="switch"
-                data-device="wochenplanG"
-                class=""
-                data-set="disable"
-                data-set-on="0"
-                data-set-off="1"
-                data-get="disable"
-                data-get-on="0"
-                data-get-off="1"
-                data-icon="fa-coins"
-                data-cmd="setreading"
-              ></div>
-              <div data-type="label" class="">
-                Aktivierung in günstigen Stromzeiten
-              </div>
-              <div
-                data-type="switch"
-                data-device="wochenplanGM"
-                class=""
-                data-set="disable"
-                data-set-on="0"
-                data-set-off="1"
-                data-get="disable"
-                data-get-on="0"
-                data-get-off="1"
-                data-icon="fa-money-bill"
-                data-cmd="setreading"
-              ></div>
-              <div data-type="label" class="">
-                Aktivierung in günstigen & mittleren Stromzeiten
-              </div>
+          <div class="hbox">
+            <div data-type="input" data-device="overheating" data-get="state" data-value="15" id="sendoverheating">
             </div>
-            <div data-type="label" class="l" style="text-align: left">
-              Werktags
-            </div>
-            <div class="hbox">
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time1"
-                data-set="time1"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr -</div>
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time2"
-                data-set="time2"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr</div>
-              <div class="inline">
-                <div
-                  data-type="select"
-                  data-device="tarifplan"
-                  data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="tarif1"
-                  data-set="tarif1"
-                  data-cmd="setreading"
-                ></div>
-              </div>
-              Preis pro KWh
-            </div>
-            <div class="hbox">
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time2"
-                data-set="time2"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr -</div>
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time3"
-                data-set="time3"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr</div>
-              <div class="inline">
-                <div
-                  data-type="select"
-                  data-device="tarifplan"
-                  data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="tarif2"
-                  data-set="tarif2"
-                  data-cmd="setreading"
-                ></div>
-              </div>
-              Preis pro KWh
-            </div>
-            <div class="hbox">
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time3"
-                data-set="time3"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr -</div>
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time4"
-                data-set="time4"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr</div>
-              <div class="inline">
-                <div
-                  data-type="select"
-                  data-device="tarifplan"
-                  data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="tarif3"
-                  data-set="tarif3"
-                  data-cmd="setreading"
-                ></div>
-              </div>
-              Preis pro KWh
-            </div>
-            <div class="hbox">
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time4"
-                data-set="time4"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr -</div>
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time5"
-                data-set="time5"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr</div>
-              <div class="inline">
-                <div
-                  data-type="select"
-                  data-device="tarifplan"
-                  data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="tarif4"
-                  data-set="tarif4"
-                  data-cmd="setreading"
-                ></div>
-              </div>
-              Preis pro KWh
-            </div>
-            <div class="hbox">
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time5"
-                data-set="time5"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr -</div>
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time6"
-                data-set="time6"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr</div>
-              <div class="inline">
-                <div
-                  data-type="select"
-                  data-device="tarifplan"
-                  data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="tarif5"
-                  data-set="tarif5"
-                  data-cmd="setreading"
-                ></div>
-              </div>
-              Preis pro KWh
-            </div>
-            <div class="hbox">
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time6"
-                data-set="time6"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr -</div>
-              <div
-                data-type="datetimepicker"
-                data-device="timetable"
-                data-cmd="setreading"
-                data-get="time7"
-                data-set="time7"
-                data-step="60"
-                data-datepicker="false"
-                data-format="H:i"
-                data-color="#0096c7"
-                class="inline large cell"
-              ></div>
-              <div class="inline large cell">Uhr</div>
-              <div class="inline">
-                <div
-                  data-type="select"
-                  data-device="tarifplan"
-                  data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="tarif6"
-                  data-set="tarif6"
-                  data-cmd="setreading"
-                ></div>
-              </div>
-              Preis pro KWh
-            </div>
-            <div data-type="label" class="l" style="text-align: left">
-              Wochenende
-            </div>
-            <div class="hbox">
-              <div class="inline large cell">00:00</div>
-              <div class="inline large cell">Uhr -</div>
-              <div class="inline large cell">24:00</div>
-              <div class="inline large cell">Uhr</div>
-              <div class="inline">
-                <div
-                  data-type="select"
-                  data-device="tarifplan"
-                  data-items='["günstigster", "mittlerer", "teuerster"]'
-                  data-get="tarif7"
-                  data-set="tarif7"
-                  data-cmd="setreading"
-                ></div>
-              </div>
-              Preis pro KWh
+            <div data-type="link" class="round" data-device="overheating" data-get="" data-value="#sendoverheating"
+              data-color="#0096c7">
+              OK
             </div>
           </div>
-        </li>
-        <!-- Einschalten Wasserboiler ab >400 Watt Solarstrom -->
-        <li data-row="6" data-col="3" data-sizex="1" data-sizey="2">
-          <div class="cell">
-            <header>Warmwasserboiler</header>
+        </div>
+      </li>
+      <!-- Optimiertes Heizen per Infrarotheizung -->
+      <li data-row="2" data-col="3" data-sizex="1" data-sizey="4">
+        <div class="cell">
+          <header>Optimiertes Heizen per Infrarotheizung</header>
+          <div data-type="checkbox" data-device="optimiertesHeizen" class="" data-get="state" data-set-on="active"
+            data-set-off="inactive" data-get-on="active" data-get-off="inactive" data-cmd="setreading" data-set="state"
+            data-on-background-color="#0096c7"></div>
+          <div data-type="label" class="">
+            Infrarotheizung einschalten ab:
+          </div>
+          <div data-type="label" class="">Temperatur unter (in °C):</div>
+          <div class="hbox">
+            <div data-type="input" data-device="SensorTemperatureMin" data-get="state" data-value="19"
+              id="sendTemperatureMin"></div>
+            <div data-type="link" class="round" data-device="SensorTemperatureMin" data-get="" data-color="#0096c7"
+              data-value="#sendTemperatureMin">
+              OK
+            </div>
+          </div>
+          <div data-type="label" class="">Luftfeuchtigkeit über (in %):</div>
+          <div class="hbox">
+            <div data-type="input" data-device="SensorHumidityMax" data-get="state" data-value="75"
+              id="sendHumidityMax"></div>
+            <div data-type="link" class="round" data-device="SensorHumidityMax" data-get="" data-color="#0096c7"
+              data-value="#sendHumidityMax">
+              OK
+            </div>
+          </div>
+          <div data-type="label" class="">
+            Infrarotheizung ausschalten ab:
+          </div>
+          <div data-type="label" class="">Temperatur über (in °C):</div>
+          <div class="hbox">
+            <div data-type="input" data-device="SensorTemperatureMax" data-get="state" data-value="21"
+              id="sendTemperatureMax"></div>
+            <div data-type="link" class="round" data-device="SensorTemperatureMax" data-get="" data-color="#0096c7"
+              data-value="#sendTemperatureMax">
+              OK
+            </div>
+          </div>
+          <div data-type="label" class="">Luftfeuchtigkeit unter (in %):</div>
+          <div class="hbox">
+            <div data-type="input" data-device="SensorHumidityMin" data-get="state" data-value="70"
+              id="sendHumidityMin"></div>
+            <div data-type="link" class="round" data-device="SensorHumidityMin" data-get="" data-color="#0096c7"
+              data-value="#sendHumidityMin">
+              OK
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- Optimierter Betrieb Warmwasserboiler -->
+      <li data-row="4" data-col="2" data-sizex="2" data-sizey="2">
+        <div class="cell">
+          <header>Optimierter Betrieb Warmwasserboiler</header>
+          <div data-type="label" class="">Manuelles Ein-/Ausschalten</div>
+          <div data-type="checkbox" data-device="Warmwasserboiler" class="" data-get="State" data-set-on="on"
+            data-set-off="off" data-get-on="on" data-get-off="off"></div>
+          <div data-type="label" class="">Aktivierung im Zeitraum:</div>
+          <div data-type="switch" data-device="bestimmterZeitraum" class="" data-set-on="initialize"
+            data-set-off="disable" data-get-on="!disabled" data-get-off="disabled" data-icon="fa-calendar-alt"></div>
+          <div data-type="datetimepicker" data-device="bestimmterZeitraum" data-step="1" data-format="d.m.Y H:i"
+            data-set="P_begin" data-get="P_begin" data-set-on="on" data-set-off="off" data-get-on="on"
+            data-get-off="off" class="inline"></div>
+          -
+          <div data-type="datetimepicker" data-device="bestimmterZeitraum" data-step="5" data-format="d.m.Y H:i"
+            data-set="P_ende" data-get="P_ende" data-set-on="on" data-set-off="off" data-get-on="on" data-get-off="off"
+            class="inline"></div>
+        </div>
+      </li>
+      <!-- Wochenplan -->
+      <li data-row="4" data-col="3" data-sizex="2" data-sizey="4">
+        <div class="cell">
+          <div class="hbox">
+            <div data-type="switch" data-device="wochenplanG" class="" data-set="disable" data-set-on="0"
+              data-set-off="1" data-get="disable" data-get-on="0" data-get-off="1" data-icon="fa-coins"
+              data-cmd="setreading"></div>
             <div data-type="label" class="">
-              Einschalten ab Wattzahl (Solarstrom)
+              Aktivierung in günstigen Stromzeiten
             </div>
-            <div
-              data-type="switch"
-              data-device="warmwasserboilerWattmodus"
-              class=""
-              data-get="state"
-              data-set-on="active"
-              data-set-off="inactive"
-              data-get-on="!inactive"
-              data-get-off="inactive"
-              data-icon="fa-sun"
-              data-cmd="setreading"
-              data-set="state"
-            ></div>
+            <div data-type="switch" data-device="wochenplanGM" class="" data-set="disable" data-set-on="0"
+              data-set-off="1" data-get="disable" data-get-on="0" data-get-off="1" data-icon="fa-money-bill"
+              data-cmd="setreading"></div>
             <div data-type="label" class="">
-              Erzeugung Solarstrom ab (in Watt):
-            </div>
-            <div class="hbox">
-              <div
-                data-type="input"
-                data-device="wattnumberWarmwasserboiler"
-                data-get="state"
-                data-value="400"
-                id="sendwattnumberWarmwasserboiler"
-              ></div>
-              <div
-                data-type="link"
-                class="round"
-                data-device="wattnumberWarmwasserboiler"
-                data-get=""
-                data-value="#sendwattnumberWarmwasserboiler"
-                data-color="#0096c7"
-              >
-                OK
-              </div>
-            </div>
-            <div data-type="label" class="">
-              Überprüfungsintervall: 5 Minuten
+              Aktivierung in günstigen & mittleren Stromzeiten
             </div>
           </div>
-        </li>
-        <!-- Status der Geräte Infrarotheizung und Warmwasserboiler sowie Priorisierung-->
-        <li data-row="6" data-col="2" data-sizex="1" data-sizey="2">
-          <div class="cell">
-            <header>Aktuelle Geräte im Haus</header>
-            <div class="flex">
-              <div
-                data-type="symbol"
-                data-device="Infrarotheizung"
-                data-icon="fa-power-off"
-                data-background-icon="fa-circle"
-                data-on-color="#0096c7"
-                data-on-background-color="bg-lightgray"
-                class="cell inline"
-              ></div>
-              <div
-                data-type="symbol"
-                data-device="Warmwasserboiler"
-                data-icon="fa-power-off"
-                data-background-icon="fa-circle"
-                data-on-color="#0096c7"
-                data-on-background-color="bg-lightgray"
-                class="cell inline"
-              ></div>
-            </div>
-            <div class="flex">
-              <div data-type="label" class="">Infrarotheizung</div>
-              <div data-type="label" class="">Warmwasserboiler</div>
-            </div>
-            <div
-              data-type="checkbox"
-              data-device="Priorisierung"
-              data-set-on="active"
-              data-set-off="inactive"
-              data-get-on="active"
-              data-get-off="inactive"
-              data-get="state"
-              data-set="state"
-              data-cmd="setreading"
-              data-on-background-color="#0096c7"
-            ></div>
-            <div data-type="label" class="">Priorisierung</div>
+          <div data-type="label" class="l" style="text-align: left">
+            Werktags
           </div>
-        </li>
-      </ul>
-    </div>
-  </body>
+          <div class="hbox">
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time1"
+              data-set="time1" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr -</div>
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time2"
+              data-set="time2" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr</div>
+            <div class="inline">
+              <div data-type="select" data-device="tarifplan" data-items='["günstigster", "mittlerer", "teuerster"]'
+                data-get="tarif1" data-set="tarif1" data-cmd="setreading"></div>
+            </div>
+            Preis pro KWh
+          </div>
+          <div class="hbox">
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time2"
+              data-set="time2" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr -</div>
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time3"
+              data-set="time3" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr</div>
+            <div class="inline">
+              <div data-type="select" data-device="tarifplan" data-items='["günstigster", "mittlerer", "teuerster"]'
+                data-get="tarif2" data-set="tarif2" data-cmd="setreading"></div>
+            </div>
+            Preis pro KWh
+          </div>
+          <div class="hbox">
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time3"
+              data-set="time3" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr -</div>
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time4"
+              data-set="time4" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr</div>
+            <div class="inline">
+              <div data-type="select" data-device="tarifplan" data-items='["günstigster", "mittlerer", "teuerster"]'
+                data-get="tarif3" data-set="tarif3" data-cmd="setreading"></div>
+            </div>
+            Preis pro KWh
+          </div>
+          <div class="hbox">
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time4"
+              data-set="time4" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr -</div>
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time5"
+              data-set="time5" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr</div>
+            <div class="inline">
+              <div data-type="select" data-device="tarifplan" data-items='["günstigster", "mittlerer", "teuerster"]'
+                data-get="tarif4" data-set="tarif4" data-cmd="setreading"></div>
+            </div>
+            Preis pro KWh
+          </div>
+          <div class="hbox">
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time5"
+              data-set="time5" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr -</div>
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time6"
+              data-set="time6" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr</div>
+            <div class="inline">
+              <div data-type="select" data-device="tarifplan" data-items='["günstigster", "mittlerer", "teuerster"]'
+                data-get="tarif5" data-set="tarif5" data-cmd="setreading"></div>
+            </div>
+            Preis pro KWh
+          </div>
+          <div class="hbox">
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time6"
+              data-set="time6" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr -</div>
+            <div data-type="datetimepicker" data-device="timetable" data-cmd="setreading" data-get="time7"
+              data-set="time7" data-step="60" data-datepicker="false" data-format="H:i" data-color="#0096c7"
+              class="inline large cell"></div>
+            <div class="inline large cell">Uhr</div>
+            <div class="inline">
+              <div data-type="select" data-device="tarifplan" data-items='["günstigster", "mittlerer", "teuerster"]'
+                data-get="tarif6" data-set="tarif6" data-cmd="setreading"></div>
+            </div>
+            Preis pro KWh
+          </div>
+          <div data-type="label" class="l" style="text-align: left">
+            Wochenende
+          </div>
+          <div class="hbox">
+            <div class="inline large cell">00:00</div>
+            <div class="inline large cell">Uhr -</div>
+            <div class="inline large cell">24:00</div>
+            <div class="inline large cell">Uhr</div>
+            <div class="inline">
+              <div data-type="select" data-device="tarifplan" data-items='["günstigster", "mittlerer", "teuerster"]'
+                data-get="tarif7" data-set="tarif7" data-cmd="setreading"></div>
+            </div>
+            Preis pro KWh
+          </div>
+        </div>
+      </li>
+      <!-- Einschalten Wasserboiler ab >400 Watt Solarstrom -->
+      <li data-row="6" data-col="3" data-sizex="1" data-sizey="2">
+        <div class="cell">
+          <header>Warmwasserboiler</header>
+          <div data-type="label" class="">
+            Einschalten ab Wattzahl (Solarstrom)
+          </div>
+          <div data-type="switch" data-device="warmwasserboilerWattmodus" class="" data-get="state" data-set-on="active"
+            data-set-off="inactive" data-get-on="!inactive" data-get-off="inactive" data-icon="fa-sun"
+            data-cmd="setreading" data-set="state"></div>
+          <div data-type="label" class="">
+            Erzeugung Solarstrom ab (in Watt):
+          </div>
+          <div class="hbox">
+            <div data-type="input" data-device="wattnumberWarmwasserboiler" data-get="state" data-value="400"
+              id="sendwattnumberWarmwasserboiler"></div>
+            <div data-type="link" class="round" data-device="wattnumberWarmwasserboiler" data-get=""
+              data-value="#sendwattnumberWarmwasserboiler" data-color="#0096c7">
+              OK
+            </div>
+          </div>
+          <div data-type="label" class="">
+            Überprüfungsintervall: 5 Minuten
+          </div>
+        </div>
+      </li>
+      <!-- Status der Geräte Infrarotheizung und Warmwasserboiler sowie Priorisierung-->
+      <li data-row="6" data-col="2" data-sizex="1" data-sizey="2">
+        <div class="cell">
+          <header>Aktuelle Geräte im Haus</header>
+          <div class="flex">
+            <div data-type="symbol" data-device="Infrarotheizung" data-icon="fa-power-off"
+              data-background-icon="fa-circle" data-on-color="#0096c7" data-on-background-color="bg-lightgray"
+              class="cell inline"></div>
+            <div data-type="symbol" data-device="Warmwasserboiler" data-icon="fa-power-off"
+              data-background-icon="fa-circle" data-on-color="#0096c7" data-on-background-color="bg-lightgray"
+              class="cell inline"></div>
+          </div>
+          <div class="flex">
+            <div data-type="label" class="">Infrarotheizung</div>
+            <div data-type="label" class="">Warmwasserboiler</div>
+          </div>
+          <div data-type="checkbox" data-device="Priorisierung" data-set-on="active" data-set-off="inactive"
+            data-get-on="active" data-get-off="inactive" data-get="state" data-set="state" data-cmd="setreading"
+            data-on-background-color="#0096c7"></div>
+          <div data-type="label" class="">Priorisierung</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+
 </html>
