@@ -42,7 +42,7 @@
               data-device="aktualisieren"
               data-set-on="active"
               data-set-off="inactive"
-              data-get-on="active"
+              data-get-on="!inactive"
               data-get-off="inactive"
               data-get="state"
               class=""
@@ -72,9 +72,10 @@
             <div class="hbox">
               <div
                 data-type="input"
+                data-device="wattnumber"
+                data-get="state"
                 data-value="300"
                 id="sendwattnumber"
-                class="notransmit"
               ></div>
               <div
                 data-type="link"
@@ -93,9 +94,10 @@
             <div class="hbox">
               <div
                 data-type="input"
+                data-device="heatMax"
+                data-get="state"
                 data-value="120"
                 id="sendheatMax"
-                class="notransmit"
               ></div>
               <div
                 data-type="link"
@@ -114,9 +116,10 @@
             <div class="hbox">
               <div
                 data-type="input"
+                data-device="overheating"
+                data-get="state"
                 data-value="15"
                 id="sendoverheating"
-                class="notransmit"
               ></div>
               <div
                 data-type="link"
@@ -146,6 +149,7 @@
               data-get-off="inactive"
               data-cmd="setreading"
               data-set="state"
+              data-on-background-color="#0096c7"
             ></div>
             <div data-type="label" class="">
               Infrarotheizung einschalten ab:
@@ -154,9 +158,10 @@
             <div class="hbox">
               <div
                 data-type="input"
+                data-device="SensorTemperatureMin"
+                data-get="state"
                 data-value="19"
                 id="sendTemperatureMin"
-                class="notransmit"
               ></div>
               <div
                 data-type="link"
@@ -173,9 +178,10 @@
             <div class="hbox">
               <div
                 data-type="input"
+                data-device="SensorHumidityMax"
+                data-get="state"
                 data-value="75"
                 id="sendHumidityMax"
-                class="notransmit"
               ></div>
               <div
                 data-type="link"
@@ -195,9 +201,10 @@
             <div class="hbox">
               <div
                 data-type="input"
+                data-device="SensorTemperatureMax"
+                data-get="state"
                 data-value="21"
                 id="sendTemperatureMax"
-                class="notransmit"
               ></div>
               <div
                 data-type="link"
@@ -214,9 +221,10 @@
             <div class="hbox">
               <div
                 data-type="input"
+                data-device="SensorHumidityMin"
+                data-get="state"
                 data-value="70"
                 id="sendHumidityMin"
-                class="notransmit"
               ></div>
               <div
                 data-type="link"
@@ -251,14 +259,11 @@
               data-type="switch"
               data-device="bestimmterZeitraum"
               class=""
-              data-get="state"
-              data-set-on="on"
-              data-set-off="off"
-              data-get-on="on"
-              data-get-off="off"
+              data-set-on="initialize"
+              data-set-off="disable"
+              data-get-on="!disabled"
+              data-get-off="disabled"
               data-icon="fa-calendar-alt"
-              data-cmd="setreading"
-              data-set="state"
             ></div>
             <div
               data-type="datetimepicker"
@@ -297,13 +302,13 @@
                 data-type="switch"
                 data-device="wochenplanG"
                 class=""
-                data-get="state"
-                data-set-on="active"
-                data-set-off="inactive"
-                data-get-on="active"
-                data-get-off="inactive"
+                data-set="disable"
+                data-set-on="0"
+                data-set-off="1"
+                data-get="disable"
+                data-get-on="0"
+                data-get-off="1"
                 data-icon="fa-coins"
-                data-set="state"
                 data-cmd="setreading"
               ></div>
               <div data-type="label" class="">
@@ -313,13 +318,13 @@
                 data-type="switch"
                 data-device="wochenplanGM"
                 class=""
-                data-get="state"
-                data-set-on="active"
-                data-set-off="inactive"
-                data-get-on="active"
-                data-get-off="inactive"
+                data-set="disable"
+                data-set-on="0"
+                data-set-off="1"
+                data-get="disable"
+                data-get-on="0"
+                data-get-off="1"
                 data-icon="fa-money-bill"
-                data-set="state"
                 data-cmd="setreading"
               ></div>
               <div data-type="label" class="">
@@ -599,7 +604,7 @@
               data-get="state"
               data-set-on="active"
               data-set-off="inactive"
-              data-get-on="active"
+              data-get-on="!inactive"
               data-get-off="inactive"
               data-icon="fa-sun"
               data-cmd="setreading"
@@ -611,9 +616,10 @@
             <div class="hbox">
               <div
                 data-type="input"
+                data-device="wattnumberWarmwasserboiler"
+                data-get="state"
                 data-value="400"
                 id="sendwattnumberWarmwasserboiler"
-                class="notransmit"
               ></div>
               <div
                 data-type="link"
