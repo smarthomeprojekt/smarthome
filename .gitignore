@@ -8,6 +8,7 @@
 /fhem/fhem.cfg.bak
 /fhem/log/*
 /fhem/restoreDir/*
+!/fhem/log/Strom_pro_Tag.log
 ### End project specific ###
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos
