@@ -38,18 +38,17 @@
           <div class="cell">
             <header>Statistische Auswertung Balkonkraftwerk</header>
             <div class="hbox">
-              <div data-type="label" class="l" style="text-align: left">
-                Aktuell produzierter Strom:
-              </div>
               <div
                 data-type="label"
                 data-device="aktuellerStrom"
                 data-get="STATE"
                 style="text-align: left"
-                class=""
+                data-pre-text="Aktuell produzierter Strom: "
+                data-post-text=" Watt"
+                class="l"
               ></div>
             </div>
-            <div data-type="label" class="" style="text-align: left" ;>
+            <div data-type="label" class="l" style="text-align: left" ;>
               Aktualisierungsintervall (in Minuten):
             </div>
             <div class="hbox">
@@ -71,34 +70,82 @@
         </li>
         <li data-row="5" data-col="2" data-sizex="2" data-sizey="2">
           <div class="cell">
-            <div data-type="label" style="text-align: left" class="l">
-              Aktueller Tag:
-            </div>
-            <div data-type="label" style="text-align: left" class="l">
-              Vorhergehender Tag:
-            </div>
-            <div data-type="label" style="text-align: left" class="l">
-              Aktuelle Woche:
-            </div>
-            <div data-type="label" style="text-align: left" class="l">
-              Vorhergehende Woche:
-            </div>
-            <div data-type="label" style="text-align: left" class="l">
-              Aktueller Monat:
-            </div>
-            <div data-type="label" style="text-align: left" class="l">
-              Vorhergehender Monat:
-            </div>
-            <div data-type="label" style="text-align: left" class="l">
-              Aktuelles Jahr:
-            </div>
-            <div data-type="label" style="text-align: left" class="l">
-              Vorhergehendes Jahr:
-            </div>
+            <div
+              data-type="label"
+              data-device="tageserzeugt"
+              data-get="STATE"
+              style="text-align: left"
+              data-pre-text="Aktueller Tag: "
+              data-post-text=" kWh"
+              class="l"
+            ></div>
+            <div
+              data-type="label"
+              data-device="Strom_pro_Tag"
+              data-get="STATE"
+              style="text-align: left"
+              data-pre-text="Vorhergehender Tag: "
+              data-post-text=" kWh"
+              class="l"
+            ></div>
+            <div
+              data-type="label"
+              data-device="wochenerzeugt"
+              data-get="STATE"
+              style="text-align: left"
+              data-pre-text="Aktuelle Woche: "
+              data-post-text=" kWh"
+              class="l"
+            ></div>
+            <div
+              data-type="label"
+              data-device="erzeugt_letzte_woche"
+              data-get="STATE"
+              style="text-align: left"
+              data-pre-text="Vorhergehende Woche: "
+              data-post-text=" kWh"
+              class="l"
+            ></div>
+            <div
+              data-type="label"
+              data-device="monatserzeugt"
+              data-get="STATE"
+              style="text-align: left"
+              data-pre-text="Aktueller Monat: "
+              data-post-text=" kWh"
+              class="l"
+            ></div>
+            <div
+              data-type="label"
+              data-device="erzeugt_letzter_monat"
+              data-get="STATE"
+              style="text-align: left"
+              data-pre-text="Vorhergehender Monat: "
+              data-post-text=" kWh"
+              class="l"
+            ></div>
+            <div
+              data-type="label"
+              data-device="jahreserzeugt"
+              data-get="STATE"
+              style="text-align: left"
+              data-pre-text="Aktuelles Jahr: "
+              data-post-text=" kWh"
+              class="l"
+            ></div>
+            <div
+              data-type="label"
+              data-device="erzeugt_letztes_jahr"
+              data-get="STATE"
+              style="text-align: left"
+              data-pre-text="Vorhergehendes Jahr: "
+              data-post-text=" kWh"
+              class="l"
+            ></div>
           </div>
         </li>
         <!-- Balkendiagramm -->
-        <li data-row="2" data-col="4" data-sizex="3" data-sizey="3">
+        <li data-row="2" data-col="4" data-sizex="3" data-sizey="4">
           <div class="cell">
             <div
               data-type="chart"
@@ -109,9 +156,8 @@
               data-columnspec='["3"]'
               data-minvalue="0"
               data-yunit="kWh"
-              data-ytext="Kilowattstunde"
-              data-daysago_start="2021-01-01T00:00:00"
-              data-daysago_end="2021-12-31T00:00:00"
+              data-daysago_start="2022-01-01T00:00:00"
+              data-daysago_end="2022-01-31T00:00:00"
               data-title="Erzeugter Strom"
               data-style="ftui l6fill"
               data-timeranges='[
