@@ -148,7 +148,7 @@
                 data-type="symbol"
                 data-device="Muelltonnen"
                 data-get="next"
-                data-get-on="Restmuell.*"
+                data-get-on="Restmuell01"
                 data-get-warn=".*(\d+).*"
                 data-icons='["fa-trash-o","fa-trash-o"]'
                 data-background-icon="fa-circle"
@@ -158,6 +158,32 @@
               <div data-type="label" class="">Biomüll</div>
               <div data-type="label" class="">Papiertonne</div>
               <div data-type="label" class="">Restmüll</div>
+            </div>
+            <div class="flex">
+              <div
+                data-type="label"
+                data-device="Muelltonnen"
+                data-pre-text="Abholung in "
+                data-post-text=" Tagen"
+                data-get="Biomuell01-woechentl_days"
+                class=""
+              ></div>
+              <div
+                data-type="label"
+                data-device="Muelltonnen"
+                data-pre-text="Abholung in "
+                data-post-text=" Tagen"
+                data-get="Altpapier03-woechentl_days"
+                class=""
+              ></div>
+              <div
+                data-type="label"
+                data-device="Muelltonnen"
+                data-pre-text="Abholung in "
+                data-post-text=" Tagen"
+                data-get="Restmuell01-woechentl_days"
+                class=""
+              ></div>
             </div>
           </div>
         </li>
