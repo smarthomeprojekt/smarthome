@@ -113,11 +113,11 @@ option {
 
 /* symbol  widget */
 /* foreground on */
-[data-type="symbol"]:not([data-colors]):not([data-on-color]):not([data-color])
+/* [data-type="symbol"]:not([data-colors]):not([data-on-color]):not([data-color])
   .active
   i#fg {
   color: #0088cc !important;
-}
+} */
 /* foreground off */
 [data-type="symbol"]:not([data-colors]):not([data-off-color]):not([data-color])
   :not(.active)

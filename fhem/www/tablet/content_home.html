@@ -113,7 +113,6 @@
                 data-type="image"
                 data-url="http://niederschlagsradar.mobi/Image/?item=&amp;regio=&amp;w=235"
                 data-size="170px"
-                class="nocache"
               ></div>
             </div>
           </div>
@@ -124,64 +123,93 @@
             <header>Abfallkalender</header>
             <div class="flex">
               <div
-                class="cell big"
-                data-type="symbol"
-                data-device="Muelltonnen"
-                data-get="next"
-                data-get-on=".*Biomuell.*"
-                data-icon="fa-trash-o"
-                data-background-icon="fa-circle"
-              ></div>
+                class="flex"
+                style="
+                  text-align: center;
+                  justify-content: center;
+                  flex-direction: column;
+                "
+              >
+                <div
+                  class="cell big"
+                  data-type="symbol"
+                  data-device="Muelltonnen"
+                  data-get="next"
+                  data-get-on=".*Biomuell.*"
+                  data-icon="fa-trash-o"
+                  data-background-icon="fa-circle"
+                  data-on-background-color="rgb(0, 150, 199)"
+                  data-on-color="0xfff"
+                ></div>
+                <div data-type="label" class="">Biomüll</div>
+                <div
+                  data-type="label"
+                  data-device="Muelltonnen"
+                  data-pre-text="Abholung in "
+                  data-post-text=" Tagen"
+                  data-get="Biomuell01-woechentl_days"
+                  class=""
+                ></div>
+              </div>
               <div
-                class="cell big"
-                data-type="symbol"
-                data-device="Muelltonnen"
-                data-get="next"
-                data-get-on=".*Altpapier.*"
-                data-icon="fa-trash-o"
-                data-background-icon="fa-circle"
-              ></div>
+                class="flex"
+                style="
+                  text-align: center;
+                  justify-content: center;
+                  flex-direction: column;
+                "
+              >
+                <div
+                  class="cell big"
+                  data-type="symbol"
+                  data-device="Muelltonnen"
+                  data-get="next"
+                  data-get-on=".*Altpapier.*"
+                  data-icon="fa-trash-o"
+                  data-background-icon="fa-circle"
+                  data-on-background-color="rgb(0, 150, 199)"
+                  data-on-color="0xfff"
+                ></div>
+                <div data-type="label" class="">Papiertonne</div>
+                <div
+                  data-type="label"
+                  data-device="Muelltonnen"
+                  data-pre-text="Abholung in "
+                  data-post-text=" Tagen"
+                  data-get="Altpapier03-woechentl_days"
+                  class=""
+                ></div>
+              </div>
               <div
-                class="cell big"
-                data-type="symbol"
-                data-device="Muelltonnen"
-                data-get="next"
-                data-get-on="Restmuell01"
-                data-get-warn=".*(\d+).*"
-                data-icons='["fa-trash-o","fa-trash-o"]'
-                data-background-icon="fa-circle"
-              ></div>
-            </div>
-            <div class="flex">
-              <div data-type="label" class="">Biomüll</div>
-              <div data-type="label" class="">Papiertonne</div>
-              <div data-type="label" class="">Restmüll</div>
-            </div>
-            <div class="flex">
-              <div
-                data-type="label"
-                data-device="Muelltonnen"
-                data-pre-text="Abholung in "
-                data-post-text=" Tagen"
-                data-get="Biomuell01-woechentl_days"
-                class=""
-              ></div>
-              <div
-                data-type="label"
-                data-device="Muelltonnen"
-                data-pre-text="Abholung in "
-                data-post-text=" Tagen"
-                data-get="Altpapier03-woechentl_days"
-                class=""
-              ></div>
-              <div
-                data-type="label"
-                data-device="Muelltonnen"
-                data-pre-text="Abholung in "
-                data-post-text=" Tagen"
-                data-get="Restmuell01-woechentl_days"
-                class=""
-              ></div>
+                class="flex"
+                style="
+                  text-align: center;
+                  justify-content: center;
+                  flex-direction: column;
+                "
+              >
+                <div
+                  class="cell big"
+                  data-type="symbol"
+                  data-device="Muelltonnen"
+                  data-get="next"
+                  data-get-on="Restmuell01"
+                  data-get-warn=".*(\d+).*"
+                  data-icons='["fa-trash-o","fa-trash-o"]'
+                  data-background-icon="fa-circle"
+                  data-on-background-color="rgb(0, 150, 199)"
+                  data-on-color="0xfff"
+                ></div>
+                <div data-type="label" class="">Restmüll</div>
+                <div
+                  data-type="label"
+                  data-device="Muelltonnen"
+                  data-pre-text="Abholung in "
+                  data-post-text=" Tagen"
+                  data-get="Restmuell01-woechentl_days"
+                  class=""
+                ></div>
+              </div>
             </div>
           </div>
         </li>

@@ -37,17 +37,16 @@
         <li data-row="2" data-col="2" data-sizex="2" data-sizey="2">
           <div class="cell">
             <header>Statistische Auswertung Balkonkraftwerk</header>
-            <div class="hbox">
-              <div
-                data-type="label"
-                data-device="aktuellerStrom"
-                data-get="STATE"
-                style="text-align: left"
-                data-pre-text="Aktuell produzierter Strom: "
-                data-post-text=" Watt"
-                class="l"
-              ></div>
-            </div>
+            <div
+              data-type="label"
+              data-device="aktuellerStrom"
+              data-get="STATE"
+              style="text-align: left"
+              data-pre-text="Aktuell produzierter Strom: "
+              data-post-text=" Watt"
+              class="l"
+            ></div>
+            <br />
             <div data-type="label" class="l" style="text-align: left" ;>
               Aktualisierungsintervall (in Minuten):
             </div>
@@ -160,6 +159,7 @@
               data-daysago_end="2022-01-31T00:00:00"
               data-title="Erzeugter Strom"
               data-style="ftui l6fill"
+              data-showlegend="false"
               data-timeranges='[
               ["Aktuelles Jahr","0Y","-1Y"],
               ["Vorhergehendes Jahr","1Y","0Y"],
@@ -170,6 +170,9 @@
               ]'
             ></div>
           </div>
+        </li>
+        <li data-row="5" data-col="2" data-sizex="5" data-sizey="2">
+          <div class="hbox">© THE HÖME</div>
         </li>
       </ul>
     </div>
